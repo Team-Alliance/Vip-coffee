@@ -35,11 +35,48 @@
 
   /* images */
 
+  .obada p{
+	  display: block;
+	  max-width: 16% ;
+  }
+
+  .Bashar p{
+	display: block;
+	max-width: 16% ;
+
+  }
+  .khair p{
+	display: block;
+	max-width: 16% ;
+  }
+   .Bushra p{
+	display: block;
+	max-width: 16% ;
+
+   }
+
+   .Jamal p{
+	display: block;
+	max-width: 16% ;
+
+   }
+
+
+
+
   img{
       width: 15%;
   }
   .logo{
       width: 2%;
+  }
+
+  #mid-section p{
+	  text-align: center;
+
+  }
+  #mid-section a{
+	  text-decoration: none;
   }
 
 
@@ -59,7 +96,7 @@
 
   /* image css */
 
-  .image-area
+  /* .image-area
 {
 	top: 50%;
 	left: 50%;
@@ -193,4 +230,4 @@
 {
 	color: #fff;
 	background: rgba(255,255,255,0);
-}
+} */
