@@ -7,23 +7,24 @@
 // constructor for products
 
 
-// global array that has all the products 
+// global array that has all the products
 
 
 
 // array for the added items
 
 /* render prototype method{
+
   <div class="card">
                 <img class="image" src="img/desserts4.jpg" alt="Caramel sauce" style="width:100%">
-                <h1  class="title">Caramel sauce</h1>
+                <h1  class="title">title.product.allproduct[i]</h1>
                 <p class="price">this.price</p>
                 <p>this.discription</p>
                 <br>
                 <button class="cart-button">Add to Cart</button>
     </div>
-    button .add event listner('click',submitter);
-    let object=this
+     .add event listner('click',submitter);
+    let object=thisbutton
     submitter{
         added.push(object);
         local storage set item added
