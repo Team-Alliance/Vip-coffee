@@ -6,16 +6,16 @@ const Cart = function (items) {
   this.items = items;
 };
 
-Cart.prototype.addItem = function (product, quantity) {
+Cart.prototype.addItem = function (image,title,price) {
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
-  let newItem  = new CartItem(product,quantity);
+  let newItem  = new CartItem(image,title,price);
   this.items.push(newItem);
 
 };
 
 Cart.prototype.saveToLocalStorage = function () {
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
-  localStorage.setItem('cart',JSON.stringify(this.items));
+  localStorage.setItem('card',JSON.stringify(this.items));
 };
 
 Cart.prototype.removeItem = function (item) {
@@ -25,9 +25,13 @@ Cart.prototype.removeItem = function (item) {
 };
 // Constructor for CartItem;
 // Image and title and price;
-const CartItem = function (product, quantity) {
-  this.product = product;
+const CartItem = function (image, title, price, quantity) {
+  this.image = image;
+  this.title = title;
+  this.price = price;
+  
   this.quantity = quantity;
+
 };
 
 
@@ -38,6 +42,7 @@ function Product(image, title, price) {
   this.title = title;
   this.price = price;
   Product.allProduct.push(this);
+  console.log(this);
 }
 Product.allProduct = [];
 function generateProducts() {
