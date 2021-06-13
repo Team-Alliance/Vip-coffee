@@ -32,6 +32,7 @@ function setRating(ev){
   document.querySelector('.stars').setAttribute('data-rating', num);
 }
 
+
 // this is for remove button-----------------------------
 // var removeCartItemButtons = document.getElementsByClassName('btn-danger')
 // for (var i = 0; i < removeCartItemButtons.length; i++) {
