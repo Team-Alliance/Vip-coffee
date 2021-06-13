@@ -26,6 +26,9 @@
     text-decoration: none;
     display: block;
   }
+  #tbody img{
+    width: 200px;
+  }
   
 
 
