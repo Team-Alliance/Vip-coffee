@@ -1,6 +1,25 @@
 'use strict'
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let quiz = document.getElementById('quiz');
 let correct = 0;
 quiz.addEventListener('submit', quizAnswers1);
@@ -12,7 +31,9 @@ function quizAnswers1(event) {
     event.preventDefault();
     
     for (let j = 0; j < 5; j++) {
+
         let questionNo= document.getElementsByName('answer' + ' ' + j);
+
 
 
         for (let i = 0; i < questionNo.length; i++) {
@@ -23,6 +44,11 @@ function quizAnswers1(event) {
 
 
             }
+           
+            
+
+
+
 
         }
        
@@ -58,77 +84,13 @@ function promotions(correct) {
 }      
 
 
+quiz.addEventListener('click',Render)
 
-
-
-
-
-
-
-
-// let correctAnswer1='';
-// let correctAnswer2='';
-// let correctAnswer3='';
-// let correctAnswer4='';
-// let question1=document.getElementById('question1');
-
-
-// let question2=document.getElementById('question2');
-// function quizAnswers2(event){
-//     event.preventdefault();
-//     let rightAnswer1='2021';
-//     for(let i=0;i<radio.length;i++){
-//     if(event.target.id===rightAnswer1){
-//        correctAnswer2=rightAnswer1;
-
-//     }
-//     else{
-//         correctAnswer2=`wrong answer`;
-
-//     }
-// }
-
-// }
-
-// let question3=document.getElementById('question3');
-// function quizAnswers3(event){
-//     event.preventdefault();
-//     let rightAnswer1='25 years';
-
-
-//     if(event.target.id===rightAnswer1){
-//        correctAnswer3=rightAnswer1;
-
-//     }
-//     else{
-//         correctAnswer3=`wrong answer`;
-
-//     }
-
-
-// }
-
-
-// let question4=document.getElementById('question4');
-// function quizAnswers4(event){
-//     event.preventdefault();
-//     let rightAnswer1='cups3';
-
-//     if(event.target.id===rightAnswer1){
-//        correctAnswer4=rightAnswer1;
-
-//     }
-//     else{
-//         correctAnswer4=`wrong answer`;
-
-//     }
-
-
-// }
-
-// let answers=document.getElementById('answers');
-
-
-
-
+function Render(event){
+    
+for(let i=0;i<5;i++){
+    document.getElementById('question'+i).style.display = "none";
+}
+   
+}
 
