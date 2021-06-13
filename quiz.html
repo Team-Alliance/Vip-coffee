@@ -61,55 +61,71 @@
         <h1>Quiz promo code discount</h1>
         <p> Have a chance of winning up to 20% discount on your next purchase by answering these question below </p>
         <form id="quiz">
+            <section id="question1">
             <p>where do we make our coffee beans ?</p><br>
-            <input type="radio" id="jordan" name="jordan" value="jordan">
+            <input type="radio" id="jordan" name="answer 1" value="wrong">
             <label for="jordan">Jordan</label><br>
-            <input type="radio" id="USA" name="USA" value="USA">
+            <input type="radio" id="USA" name="answer 1" value="wrong">
             <label for="USA">USA</label><br>
-            <input type="radio" id="Brazil" name="Brazil" value="Brazil">
+            <input type="radio" id="Brazil" name="answer 1" value="right">
             <!--  -->
-            <label for="Brazil">Brazil</label><br><br>
+            <label for="Brazil">Brazil</label>
+        </section>
 
-            
             <br>
             <br>
+            <br>
+            <br>
+            <section id="question2">
 
             <p>when did we open our first location ?</p><br>
-            <input type="radio" id="y1" name="y1" value="1992">
+            <input type="radio" id="1992" name="answer 2" value="wrong">
             <label for="y1">1992</label><br>
-            <input type="radio" id="y2" name="y2" value="1997">
+            <input type="radio" id="1997" name="answer 2" value="wrong">
             <label for="y2">1997</label><br>
-            <input type="radio" id="y3" name="y3" value="2021">
+            <input type="radio" id="2021" name="answer 2" value="right">
             <!--  -->
-            <label for="y3">2021</label><br><br>
+            <label for="y3">2021</label>
+        </section>
+        <br>
+        <br>
 
             <br>
             <br>
 
-
+            <section id="question3">
             <p>How long will a coffee plant typically produce coffee if it is well cared for ?</p><br>
-            <input type="radio" id="10 years" name="year" value="More than 10 years">
+            <input type="radio" id="10 years" name="answer 3" value="right">
             <label for="10 years">More than 10 years</label><br>
             <!--  -->
-            <input type="radio" id="25 years" name="year" value="More than 25 years">
+            <input type="radio" id="25 years" name="answer 3" value="wrong">
             <label for="25 years">More than 25 years</label><br>
-            <input type="radio" id="15 years" name="year" value="More than 15 years">
-            <label for="15 years">More than 15 years</label><br><br>
-
+            <input type="radio" id="15 years" name="answer 3" value="wrong">
+            <label for="15 years">More than 15 years</label>
+        </section>
+        <br>
+        <br>
 
             <br>
             <br>
 
-
+            <section id="question4">
             <p>How many cups of coffee are consumed each year in the world ?</p><br>
-            <input type="radio" id="cups1" name="cups1" value="900 million">
+            <input type="radio" id="cups1" name="answer 4" value="wrong">
             <label for="cups1">900 million</label><br>
-            <input type="radio" id="cups2" name="cups2" value="2 billion">
+            <input type="radio" id="cups2" name="answer 4" value="wrong">
             <label for="cups2">2 billion</label><br>
-            <input type="radio" id="cups3" name="cups3" value="400 billion">
-            <!--  -->
+             <!--  -->
+            <input type="radio" id="cups3" name="answer 4" value="right">
             <label for="cups3">400 billion</label><br><br>
-            <input type="submit" value="Submit">
+            
+        </section>
+
+        <input type="submit" value="Submit">
+        <section id="answers">
+
+        </section>
+
         </form>
 
 
@@ -129,6 +145,7 @@
         </div>
 
     </footer>
+    <script src="js/quiz.js"></script>
 
 </body>
 
