@@ -232,30 +232,30 @@ let buttonCart;
 let div=document.getElementsByClassName('card')[0];
 Product.prototype.render=function () {
 
-  
-parent.appendChild(div);
-let image=document.createElement('img');
-div.appendChild(image);
-image.src = this.image;
 
-let headerTitle=document.createElement('h1');
-div.appendChild(headerTitle);
-headerTitle.textContent=this.title;
+  parent.appendChild(div);
+  let image=document.createElement('img');
+  div.appendChild(image);
+  image.src = this.image;
 
-let priceItem=document.createElement('p');
-priceItem.textContent=this.price;
-div.appendChild(priceItem);
+  let headerTitle=document.createElement('h1');
+  div.appendChild(headerTitle);
+  headerTitle.textContent=this.title;
 
-
-
-let discriptionItem=document.createElement('p');
-discriptionItem.textContent=this.description;
-div.appendChild(discriptionItem);
+  let priceItem=document.createElement('p');
+  priceItem.textContent=this.price;
+  div.appendChild(priceItem);
 
 
-let buttonCart=document.createElement('button');
-buttonCart.textContent='Add To Cart';
-div.appendChild(buttonCart);
+
+  let discriptionItem=document.createElement('p');
+  discriptionItem.textContent=this.description;
+  div.appendChild(discriptionItem);
+
+
+  let buttonCart=document.createElement('button');
+  buttonCart.textContent='Add To Cart';
+  div.appendChild(buttonCart);
 
 
   // if (Product.allProduct.catagory==='beverage') {
