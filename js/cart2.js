@@ -89,6 +89,3 @@ for (let i = 0; i < Product.allproduct.length; i++) {
 Product.prototype.removeItem = function (item) {
   products.splice(item,1);
 };
-
-
-
