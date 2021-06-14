@@ -79,9 +79,9 @@ next.addEventListener('click', function (e) {
   e.preventDefault();
 
   // Suspend click listener during fade animation
-  if (quiz.is(':animated')) {
-    return false;
-  }
+  // if (quiz.is(':animated')) {
+  //   return false;
+  // }
   choose();
 
   // If no user selection, progress is stopped
@@ -166,8 +166,20 @@ function createRadios(index) {
   for (let i = 0; i < questions[index].choices.length; i++) {
     // item = $('<li>');
     item = document.createElement('li');
-    input = '<input type="radio" name="answer" value=' + i + ' />';
-    input += questions[index].choices[i];
+    let input = document.createElement('input');
+    input.style.display = 'block';
+    input.setAttribute('type', 'radio');
+    input.setAttribute('name', 'answer');
+    input.setAttribute('value', i);
+    input.setAttribute('id', i);
+
+    let label = document.createElement('label');
+    label.setAttribute('for', i);
+
+    item.appendChild(label);
+
+    // input = '<input type="radio" name="answer" value=' + i + ' />';
+    label.textContent = questions[index].choices[i];
     item.appendChild(input);
     radioList.appendChild(item);
   }
@@ -177,8 +189,14 @@ function createRadios(index) {
 // Reads the user selection and pushes the value to an array
 function choose() {
   let radio = document.getElementsByName('answer');
-  if (radio.checked) {
-    selections[questionCounter] = +radio.value;
+  console.log('test');
+  for (let i = 0; i < radio.length; i++) {
+    console.log(radio[i]);
+    if (radio[i].checked) {
+      selections[questionCounter] = +radio[i].value;
+      console.log('checked', selections[questionCounter]);
+
+    }
   }
   // selections[questionCounter] = +$('input[na\me="answer"]:checked').val();
 }
@@ -192,16 +210,21 @@ function displayNext() {
   quiz.style.display = 'none';
 
   //TODO get elementById then remove element
-  document.getElementById('question').remove();
+  let test = document.getElementById('question')
+  if (test) {
+    test.remove();
+
+  }
   //let input = document.getElementsByName('answer');
   if (questionCounter < questions.length) {
     let nextQuestion = createQuestionElement(questionCounter);
     //TODO fadeIn =>>>> style.display='block'
-    quiz.appendChild(nextQuestion).style.display = 'block';
+    quiz.appendChild(nextQuestion)
+    quiz.style.display = 'block';
 
     if (!(isNaN(selections[questionCounter]))) {
       // TODO get input and make the input checked
-        $('input[value='+selections[questionCounter]+']').prop('checked', true);
+      $('input[value=' + selections[questionCounter] + ']').prop('checked', true);
 
 
     }
@@ -218,8 +241,12 @@ function displayNext() {
       document.getElementById('next').style.display = 'block';
     }
   } else {
+    // if (questionCounter === 4) {
+    //   document.getElementById('next').style.display = 'none';
+    // }
     let scoreElem = displayScore();
-    quiz.appendChild(scoreElem);
+    let scoreDiv = document.getElementById('score');
+    scoreDiv.appendChild(scoreElem);
     // TODO get next and prev and start and display none and block
 
     //   $('#next').hide();
@@ -227,7 +254,7 @@ function displayNext() {
     //   $('#prev').hide();
     document.getElementById('prev').style.display = 'none';
     //   $('#start').show();
-    document.getElementById('next').style.display = 'block';
+    document.getElementById('next').style.display = 'none';
   }
 
 }
@@ -247,8 +274,8 @@ function displayScore() {
   }
 
   score.textContent = 'You got ' + numCorrect + ' questions out of ' +
-        questions.length + ' right!!!';
-
+    questions.length + ' right!!!';
+  console.log('score', numCorrect)
   return score;
 }
 
