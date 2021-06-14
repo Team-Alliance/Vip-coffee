@@ -81,8 +81,11 @@ Product.prototype.render = function(){
 };
 function removeItemFromCart(event){
   tbody.textContent='';
-  if(event.target.textContent === 'Remove'){
-    products.splice(event.target.id,1);
+  for (let i = 0; i< Product.allproduct.length; i++) {
+    if(event.target.textContent === 'Remove'){
+      Product.allproduct.splice(event.target.id,i);
+    }
+
   }
   // products.splice(event.target.class,1);
 }
