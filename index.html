@@ -13,24 +13,30 @@
 <body>
   <header>
 
-    <a href="index.html"><img src="img/coffeelogo.png" alt="logo"></a>
+    <div class=".main-logo">
+      <!-- <a href="index.html"><img src="img/coffeelogo.png" alt="logo"></a> -->
+    </div>
 
     <nav>
       <ul>
         <li>
 
           <div class="dropdown">
+
             <a href="menu.html">
               <button class="dropbtn">Menu</button>
-
             </a>
+
             <div class="dropdown-content">
               <a href="menu.html#beverage">Beverage</a>
               <a href="menu.html#snacks">Snacks</a>
               <a href="menu.html#desserts">Sweets</a>
             </div>
+
           </div>
+
         </li>
+
         <li>
           <div class="dropdown">
             <a href="cart.html">
@@ -38,6 +44,7 @@
 
             </a>
         </li>
+
         <li>
           <div class="dropdown">
             <a href="quiz.html">
@@ -45,6 +52,7 @@
 
             </a>
         </li>
+
         <li>
           <div class="dropdown">
             <a href="about.html">
@@ -52,7 +60,9 @@
 
             </a>
         </li>
+
       </ul>
+
     </nav>
 
   </header>
@@ -80,30 +90,11 @@
     <span class="dot"></span>
   </div>
 
-  <!-- <section id="top-section">
-
-        <div class="slideshow">
-            <img src="img/timeCoffeehouse.jpeg" alt="">
-            <img src="img/timecoffeebeans.jpg" alt="">
-            <img src="img/timeCoffeehousee.jpeg" alt="">
-            <img src="img/timesandwiches.jpg" alt="">
-        </div>
-
-        <div>
-            <span class="dot"></span> 
-            <span class="dot"></span> 
-            <span class="dot"></span> 
-            <span class="dot"></span> 
-          </div>
-
-    </section> -->
-
-
-
-
   <section id="mid-section">
 
-    <video controls autoplay poster="img/videoimages.jpg" src="video/Coffee Shop Commercial   Sony a7 III.mp4"></video>
+
+    <video controls autoplay poster="img/videoimages.jpg" src="video/Coffee Shop Commercial   Sony a7 III.mp4"
+      id="videoEdit"></video>
 
     <article id="introduction-right">
 
@@ -140,7 +131,6 @@
   <article id="container">
 
     <div class="card-container">
-
       <div class="card">
         <div class="side"><img src="img/Petra.jpg" alt="italy"></div>
         <div class="side back">Jordan 9am-12pm</div>
@@ -171,20 +161,27 @@
 
   <footer>
 
-    <div id="footer">
+    <div id="footerOne">
 
       <ul>
         <li><a href="#"><img class="icon" src="img/facebookLogo.png" alt=""></a></li>
         <li><a href="#"><img class="icon" src="img/instaLogo.png" alt=""></a></li>
         <li><a href="#"><img class="icon" src="img/pinlogo.png" alt=""></a></li>
       </ul>
-      <p>&copy;2021</p>
-      <p>contacts</p>
+    </div>
 
+    <div id="footerTwo">
+      <ul>
+        <li>
+          <p>&copy;Alliance-Team 2021</p>
+          <p>Vip Coffee</p>
+          <p>Franchise</p>
+          <P>Contacts</P>
+        </li>
+      </ul>
     </div>
 
   </footer>
-
   <script src="js/home.js"></script>
 
 </body>

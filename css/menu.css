@@ -90,3 +90,10 @@
 .icon{
   width: 50px;
 }
+
+#beverage img{
+
+width: 200px;
+display: inline-block;
+
+}
