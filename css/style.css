@@ -46,7 +46,6 @@
 
 
 * {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
 img {vertical-align: middle;}
 /* Slideshow container */
@@ -144,7 +143,9 @@ img {vertical-align: middle;}
   transform: rotateY(180deg);
 }
 
-
+#introduction-right{
+  float: right;
+}
 
 
 /* footer style sheet  */
