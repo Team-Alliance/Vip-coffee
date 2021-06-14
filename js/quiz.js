@@ -201,7 +201,7 @@ function displayNext() {
 
     if (!(isNaN(selections[questionCounter]))) {
       // TODO get input and make the input checked
-        $('input[value='+selections[questionCounter]+']').prop('checked', true);
+      $('input[value='+selections[questionCounter]+']').prop('checked', true);
 
 
     }
