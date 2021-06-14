@@ -178,60 +178,73 @@
 // generateProducts();
 
 
-function Product(image, title, price, description,catagory) {
+function Product(image, title, price, description, catagory) {
   this.image = image;
   this.title = title;
   this.price = price;
-  this.description=description;
-  this.catagory=catagory;
+  this.description = description;
+  this.catagory = catagory;
   Product.allProduct.push(this);
   // console.log(this);
 }
 Product.allProduct = [];
-new Product('img/hot1.jpg', 'Caffè Americano', 3.49, 'Espresso shots topped with hot water create a light layer of crema culminating in this wonderfully rich cup with depth and nuance Pro','beverage');
+new Product('img/hot1.jpg', 'Caffè Americano', 3.49, 'Espresso shots topped with hot water create a light layer of crema culminating in this wonderfully rich cup with depth and nuance Pro', 'beverage');
 
-new Product('img/hot2.jpg', 'Cappuccino', 3.99,'Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft','beverage');
+new Product('img/hot2.jpg', 'Cappuccino', 3.99, 'Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft', 'beverage');
 
-new Product('img/hot3.jpg', 'Espresso', 4.49,'Our smooth signature Espresso Roast with rich flavor and caramelly sweetness is at the very heart of everything we do.','beverage');
+new Product('img/hot3.jpg', 'Espresso', 4.49, 'Our smooth signature Espresso Roast with rich flavor and caramelly sweetness is at the very heart of everything we do.', 'beverage');
 
-new Product('img/cold1.jpg', 'Vanilla Sweet Cream Cold Brew', 4.99,'Our slow-steeped custom blend of Starbucks® Cold Brew coffee accented with vanilla and topped with a delicate float of house-made vanilla sweet cream that cascades throughout the cup. Its over-the-top and super-smooth.','beverage');
+new Product('img/cold1.jpg', 'Vanilla Sweet Cream Cold Brew', 4.99, 'Our slow-steeped custom blend of Starbucks® Cold Brew coffee accented with vanilla and topped with a delicate float of house-made vanilla sweet cream that cascades throughout the cup. Its over-the-top and super-smooth.', 'beverage');
 
-new Product('img/cold2.jpg', 'Iced Caramel Brulée Latte', 5.99,'Our signature espresso, milk, ice and rich caramel brulée sauce finished with whipped cream and a supreme topping of even more caramel brulée.','beverage');
+new Product('img/cold2.jpg', 'Iced Caramel Brulée Latte', 5.99, 'Our signature espresso, milk, ice and rich caramel brulée sauce finished with whipped cream and a supreme topping of even more caramel brulée.', 'beverage');
 
-new Product('img/cold3.jpg', 'Iced Pineapple Matcha Drink', 4.49,'Our premium matcha green tea shaken with flavors of pineapple and ginger along with coconutmilk and ice for a delicious beverage to uplift your day.','beverage');
+new Product('img/cold3.jpg', 'Iced Pineapple Matcha Drink', 4.49, 'Our premium matcha green tea shaken with flavors of pineapple and ginger along with coconutmilk and ice for a delicious beverage to uplift your day.', 'beverage');
 
-new Product('img/snack0.jpg', 'Chicken & Beef Panini', 6.99,'Herbed chicken is slow-cooked and piled high on toasted apple brioche, topped with our double-smoked bacon and maple mustard.','snacks');
+new Product('img/snack0.jpg', 'Chicken & Beef Panini', 6.99, 'Herbed chicken is slow-cooked and piled high on toasted apple brioche, topped with our double-smoked bacon and maple mustard.', 'snacks');
 
-new Product('img/snack1.jpg', 'Crispy Grilled Cheese Sandwich', 6.49,'A delicious blend of white Cheddar and mozzarella cheeses on sourdough bread, topped with a Parmesan butter spread.','snacks');
+new Product('img/snack1.jpg', 'Crispy Grilled Cheese Sandwich', 6.49, 'A delicious blend of white Cheddar and mozzarella cheeses on sourdough bread, topped with a Parmesan butter spread.', 'snacks');
 
-new Product('img/snack2.jpg', 'Chickpea Bites & Avocado Protein Box', 7.99,'Herbed chicken is slow-cooked and piled high on toasted apple brioche, topped with our double-smoked bacon and maple mustard.','snacks');
+new Product('img/snack2.jpg', 'Chickpea Bites & Avocado Protein Box', 7.99, 'Herbed chicken is slow-cooked and piled high on toasted apple brioche, topped with our double-smoked bacon and maple mustard.', 'snacks');
 
-new Product('img/snack3.jpg', 'Eggs & Cheddar Protein Box', 14.99,'Two cage-free hardboiled eggs, sliced tart apples, grapes and white Cheddar cheese come together with multigrain muesli bread and honey peanut butter in this protein-packed lovers dream.','snacks');
+new Product('img/snack3.jpg', 'Eggs & Cheddar Protein Box', 14.99, 'Two cage-free hardboiled eggs, sliced tart apples, grapes and white Cheddar cheese come together with multigrain muesli bread and honey peanut butter in this protein-packed lovers dream.', 'snacks');
 
-new Product('img/snack4.jpg', 'Chicken & Quinoa Protein Bowl with Black Beans and Greens', 14.99,'Grilled chicken tossed with a medium-spiced chile vinaigrette for a lively but not over-the-top kick and mixed with fresh greens, tomatoes, roasted corn, black beans, jicama, paprika and cotija..','snacks');
+new Product('img/snack4.jpg', 'Chicken & Quinoa Protein Bowl with Black Beans and Greens', 14.99, 'Grilled chicken tossed with a medium-spiced chile vinaigrette for a lively but not over-the-top kick and mixed with fresh greens, tomatoes, roasted corn, black beans, jicama, paprika and cotija..', 'snacks');
 
-new Product('img/snack5.jpg', 'Banana', 3.99,'Sweet, ripe bananas are like letting a ray of sunshine into your day—a wonderfully sweet, creamy, golden, favorite fruit for all ages.','snacks');
+new Product('img/snack5.jpg', 'Banana', 3.99, 'Sweet, ripe bananas are like letting a ray of sunshine into your day—a wonderfully sweet, creamy, golden, favorite fruit for all ages.', 'snacks');
 
-new Product('img/desserts1.jpg', 'Gluten-free chocolate cake', 15.99,'Make a dense, rich chocolate cake for a special occasion or anytime treat. While suitable for those following a gluten-free diet, it will prove a hit with everyone.','desserts');
+new Product('img/desserts1.jpg', 'Gluten-free chocolate cake', 15.99, 'Make a dense, rich chocolate cake for a special occasion or anytime treat. While suitable for those following a gluten-free diet, it will prove a hit with everyone.', 'desserts');
 
-new Product('img/desserts2.jpg', 'Florentines', 9.99,'Enjoy these classic florentines at Christmas time. Jewelled with cherries and pistachios and coated in chocolate, these biscuits are the perfect festive gift.','desserts');
+new Product('img/desserts2.jpg', 'Florentines', 9.99, 'Enjoy these classic florentines at Christmas time. Jewelled with cherries and pistachios and coated in chocolate, these biscuits are the perfect festive gift.', 'desserts');
 
-new Product('img/desserts3.jpg', 'Utterly nutterly caramel layer cake', 19.99,'The toffee nut topping gives this sponge the edge- we used Brazil nuts, hazelnut, pecans and almonds.','desserts');
+new Product('img/desserts3.jpg', 'Utterly nutterly caramel layer cake', 19.99, 'The toffee nut topping gives this sponge the edge- we used Brazil nuts, hazelnut, pecans and almonds.', 'desserts');
 
-new Product('img/desserts4.jpg', 'Caramel sauce', 10.99,'This classic sauce uses only three ingredients. Drizzle around chocolate puddings or over your favourite ice cream.','desserts');
+new Product('img/desserts4.jpg', 'Caramel sauce', 10.99, 'This classic sauce uses only three ingredients. Drizzle around chocolate puddings or over your favourite ice cream.', 'desserts');
 
-new Product('img/desserts5.jpg', 'Vegan custard', 12.99,'Make our vegan coconut custard to pour over your favourite desserts. Made with coconut milk, it pairs beautifully with our carrot, coconut & date pudding.','desserts');
+new Product('img/desserts5.jpg', 'Vegan custard', 12.99, 'Make our vegan coconut custard to pour over your favourite desserts. Made with coconut milk, it pairs beautifully with our carrot, coconut & date pudding.', 'desserts');
 
-new Product('img/desserts6.jpg', 'Strawberry ice cream', 6.99,'Use sweet strawberries whilst they’re in season to make this fabulous homemade strawberry ice cream. It’s perfect on its own or as an accompaniment summer desserts.','desserts');
+new Product('img/desserts6.jpg', 'Strawberry ice cream', 6.99, 'Use sweet strawberries whilst they’re in season to make this fabulous homemade strawberry ice cream. It’s perfect on its own or as an accompaniment summer desserts.', 'desserts');
 // console.log(this.title);
-let added=[];
+let item = [];
+// console.log(items);
 // render method
-let parent=document.getElementById('menu');
-let buttonCart;
-// write code to generate
-let div=document.getElementsByClassName('card')[0];
-Product.prototype.render=function () {
 
+
+let parent = document.getElementById('menu');
+let article = document.getElementById('beverage');
+// let hElementBev =document.createElement('h1');
+// let hElementSnack=document.createElement('h1');
+parent.appendChild(article);
+// let buttonCart;
+// write code to generate
+// parent.appendChild(article);
+// let div = document.getElementsByClassName('card')[0];
+
+
+
+function render() {
+
+
+  for (let i = 0; i < Product.allProduct.length; i++) {
 
   parent.appendChild(div);
   let image=document.createElement('img');
@@ -247,6 +260,30 @@ Product.prototype.render=function () {
   div.appendChild(priceItem);
 
 
+    if (Product.allProduct[i].catagory === 'beverage') {
+
+
+      // hElementBev.textContent='Baverage';
+      let hElement=document.getElementById('hElement');
+      article.appendChild(hElement);
+      // let article=getElementById
+   
+      // hElement.textContent='Bevarage';
+      let div=document.createElement('div');
+   
+      hElement.appendChild(div);
+
+     
+      let image = document.createElement('img');
+      div.appendChild(image);
+      // image.src = this.imagoducte;
+      image.src = Product.allProduct[i].image;
+
+      let headerTitle = document.createElement('h1');
+      div.appendChild(headerTitle);
+      // headerTitle.textContent=this.title;
+      headerTitle.textContent = Product.allProduct[i].title;
+
 
   let discriptionItem=document.createElement('p');
   discriptionItem.textContent=this.description;
@@ -258,95 +295,146 @@ Product.prototype.render=function () {
   div.appendChild(buttonCart);
 
 
-  // if (Product.allProduct.catagory==='beverage') {
-  //   parent.appendChild(div);
-  //   let image=document.createElement('img');
-  //   div.appendChild(image);
-  //   image.src = this.image;
-
-  //   let headerTitle=document.createElement('h1');
-  //   div.appendChild(headerTitle);
-  //   headerTitle.textContent=this.title;
-
-  //   let priceItem=document.createElement('p');
-  //   priceItem.textContent=this.price;
-  //   div.appendChild(priceItem);
+      let priceItem = document.createElement('p');
+      // priceItem.textContent=this.price;
+      headerTitle.textContent = Product.allProduct[i].price;
+      div.appendChild(priceItem);
 
 
 
-  //   let discriptionItem=document.createElement('p');
-  //   discriptionItem.textContent=this.description;
-  //   div.appendChild(discriptionItem);
+      let discriptionItem = document.createElement('p');
+      // discriptionItem.textContent=this.description;
+      discriptionItem.textContent = Product.allProduct[i].description;
+
+      div.appendChild(discriptionItem);
 
 
-  //   let buttonCart=document.createElement('button');
-  //   buttonCart.textContent='Add To Cart';
-  //   div.appendChild(buttonCart);
-  // }else if (Product.allProduct.catagory==='snacks') {
+      let buttonCart = document.createElement('button');
+      buttonCart.textContent = 'Add To Cart';
+      buttonCart.id = i;
+      div.appendChild(buttonCart);
 
-
-  //   parent.appendChild(div);
-  //   let image=document.createElement('img');
-  //   div.appendChild(image);
-  //   image.src = this.image;
-
-  //   let headerTitle=document.createElement('h1');
-  //   div.appendChild(headerTitle);
-  //   headerTitle.textContent=this.title;
-
-  //   let priceItem=document.createElement('p');
-  //   priceItem.textContent=this.price;
-  //   div.appendChild(priceItem);
+      buttonCart.addEventListener('click', submiter);
 
 
 
-  //   let discriptionItem=document.createElement('p');
-  //   discriptionItem.textContent=this.description;
-  //   div.appendChild(discriptionItem);
+    } else if (Product.allProduct[i].catagory === 'snacks') {
+
+      let hSnack=document.getElementById('hSnack');
+      article.appendChild(hSnack);
+      // let article=getElementById
+   
+      // hElement.textContent='Bevarage';
+      let div=document.createElement('div');
+   
+      hSnack.appendChild(div);
+      // articleBev=document.getElementById('beverage');
+      // parent.appendChild(articleBev);
+
+      // hElement=document.createElement('h1');
+      // hElement.textContent='Beverage';
+
+      // articleBev.appendChild(div);
+      // articleBev.appendChild(hElement);
+      let image = document.createElement('img');
+      div.appendChild(image);
+      // image.src = this.imagoducte;
+      image.src = Product.allProduct[i].image;
+
+      let headerTitle = document.createElement('h1');
+      div.appendChild(headerTitle);
+      // headerTitle.textContent=this.title;
+      headerTitle.textContent = Product.allProduct[i].title;
+
+      let priceItem = document.createElement('p');
+      // priceItem.textContent=this.price;
+      headerTitle.textContent = Product.allProduct[i].price;
+      div.appendChild(priceItem);
 
 
-  //   let buttonCart=document.createElement('button');
-  //   buttonCart.textContent='Add To Cart';
-  //   div.appendChild(buttonCart);
 
-  // }else if (Product.allProduct.catagory==='desserts') {
-  //   parent.appendChild(div);
-  //   let image=document.createElement('img');
-  //   div.appendChild(image);
-  //   image.src = this.image;
+      let discriptionItem = document.createElement('p');
+      // discriptionItem.textContent=this.description;
+      discriptionItem.textContent = Product.allProduct[i].description;
 
-  //   let headerTitle=document.createElement('h1');
-  //   div.appendChild(headerTitle);
-  //   headerTitle.textContent=this.title;
-
-  //   let priceItem=document.createElement('p');
-  //   priceItem.textContent=this.price;
-  //   div.appendChild(priceItem);
+      div.appendChild(discriptionItem);
 
 
+      let buttonCart = document.createElement('button');
+      buttonCart.textContent = 'Add To Cart';
+      buttonCart.id = i;
+      div.appendChild(buttonCart);
 
-  //   let discriptionItem=document.createElement('p');
-  //   discriptionItem.textContent=this.description;
-  //   div.appendChild(discriptionItem);
-
-
-  //   let buttonCart=document.createElement('button');
-  //   buttonCart.textContent='Add To Cart';
-  //   div.appendChild(buttonCart);
-
-  // }
+      buttonCart.addEventListener('click', submiter);
 
 
 
 
+    }
 
-};
 
-for (let i = 0; i < Product.allProduct.length; i++) {
 
-  Product.allProduct[i].render();
+
+
+    else if (Product.allProduct[i].catagory === 'desserts') {
+      let hBverage=document.getElementById('hDess');
+      article.appendChild(hBverage);
+      // let article=getElementById
+   
+      // hElement.textContent='Bevarage';
+      let div=document.createElement('div');
+   
+      hBverage.appendChild(div);
+      // articleBev=document.getElementById('beverage');
+      // parent.appendChild(articleBev);
+
+      // hElement=document.createElement('h1');
+      // hElement.textContent='Beverage';
+
+      // articleBev.appendChild(div);
+      // articleBev.appendChild(hElement);
+      let image = document.createElement('img');
+      div.appendChild(image);
+      // image.src = this.imagoducte;
+      image.src = Product.allProduct[i].image;
+
+      let headerTitle = document.createElement('h1');
+      div.appendChild(headerTitle);
+      // headerTitle.textContent=this.title;
+      headerTitle.textContent = Product.allProduct[i].title;
+
+      let priceItem = document.createElement('p');
+      // priceItem.textContent=this.price;
+      headerTitle.textContent = Product.allProduct[i].price;
+      div.appendChild(priceItem);
+
+
+
+      let discriptionItem = document.createElement('p');
+      // discriptionItem.textContent=this.description;
+      discriptionItem.textContent = Product.allProduct[i].description;
+
+      div.appendChild(discriptionItem);
+
+
+      let buttonCart = document.createElement('button');
+      buttonCart.textContent = 'Add To Cart';
+      buttonCart.id = i;
+      div.appendChild(buttonCart);
+
+      buttonCart.addEventListener('click', submiter);
+
+
+
+    }
+
+
+  }
+
+
 }
 
+render();
 
 
 
@@ -355,40 +443,13 @@ for (let i = 0; i < Product.allProduct.length; i++) {
 
 
 
+function submiter(event) {
+  if (event.target.id) {
 
+    item.push(Product.allProduct[event.target.id]);
+         localStorage.setItem('products',JSON.stringify(item));
 
-// buttonCart.addEventListner('click',submiter);
-
-// function submiter(){
-//   added.push(this);
-
-// }
-
-//   <div class="card">
-//   <img class="image" this.image" alt="Caffè Americano" style="width:100%">
-//   <h1  class="title">this.title</h1>
-//   <p class="price">this.price</p>
-//   <p>Espresso shots topped with hot water create a light layer of crema culminating in this wonderfully
-//       rich cup with depth and nuance. Pro Tip: For an additional boost, ask your barista to try this with
-//       an extra shot.</p>
-//     <button value="Add To Cart" /></p>
-// </div>butto
-
-
-
-// create a button
-
-// add event listener
-
-// let object=this
-// function
-// adds the item to the added array
-// added.push(object)
-// setting to locla storage
-
-// setting to local storage function
-for (let i = 0; i < Product.allProduct.length; i++) {
-
-
-
+  }
+  console.log(item);
 }
+
