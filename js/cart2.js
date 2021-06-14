@@ -5,7 +5,7 @@
 //  new Product('img/hot1.jpg', 'Caffè Americano', 3.49);
 //   new Product('img/hot2.jpg', 'Cappuccino', 3.99);
 //   new Product('img/hot3.jpg', 'Espresso', 4.49);
-let products=[{image:'img/hot1.jpg', title:'Caffè Americano',price: 3.49,description:'some desc'},{image:'img/hot1.jpg', title:'Caffè Americano',price: 3.49,description:'some desc'},{image:'img/hot1.jpg', title:'Jamal',price: 3.49,description:'some desc'}];
+let products=[{image:'img/hot1.jpg', title:'Caffè Americano',price: 3.49,description:'some desc'}, {image:'img/hot1.jpg', title:'Caffè Americano',price: 3.49,description:'some desc'},{image:'img/hot1.jpg', title:'Jamal',price: 3.49,description:'some desc'}];
 
 
 function Product (image, title, price){
@@ -23,6 +23,9 @@ Product.allproduct = [];
 //   cart = new Product(cartItems);
 // }
 
+// Product.prototype.removeItem = function (item) {
+//   products.splice(item,1);
+// };
 
 for (let i = 0; i < products.length; i++) {
 //   console.log(new Product(products[i].image,products[i].title,products[i].price));
@@ -69,6 +72,7 @@ Product.prototype.render = function(){
 
   let tdRemove = document.createElement('td');
   let buttonRemove = document.createElement('button');
+  buttonRemove.setAttribute('id', 'btn');
   tdRemove.appendChild(buttonRemove);
   tr.appendChild(tdRemove);
   buttonRemove.textContent = 'Remove';
@@ -76,7 +80,11 @@ Product.prototype.render = function(){
 //   console.log(this.title);
 };
 function removeItemFromCart(event){
-  products.removeItem(event.target);
+  tbody.textContent='';
+  if(event.target.textContent === 'Remove'){
+    products.splice(event.target.id,1);
+  }
+  // products.splice(event.target.class,1);
 }
 
 
@@ -86,9 +94,6 @@ for (let i = 0; i < Product.allproduct.length; i++) {
 }
 // console.log(this.title);
 
-Product.prototype.removeItem = function (item) {
-  products.splice(item,1);
-};
 
 
 
