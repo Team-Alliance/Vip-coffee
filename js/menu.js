@@ -240,12 +240,28 @@ parent.appendChild(article);
 // let div = document.getElementsByClassName('card')[0];
 
 
+
 function render() {
 
 
   for (let i = 0; i < Product.allProduct.length; i++) {
 
+  parent.appendChild(div);
+  let image=document.createElement('img');
+  div.appendChild(image);
+  image.src = this.image;
+
+  let headerTitle=document.createElement('h1');
+  div.appendChild(headerTitle);
+  headerTitle.textContent=this.title;
+
+  let priceItem=document.createElement('p');
+  priceItem.textContent=this.price;
+  div.appendChild(priceItem);
+
+
     if (Product.allProduct[i].catagory === 'beverage') {
+
 
       // hElementBev.textContent='Baverage';
       let hElement=document.getElementById('hElement');
@@ -267,6 +283,17 @@ function render() {
       div.appendChild(headerTitle);
       // headerTitle.textContent=this.title;
       headerTitle.textContent = Product.allProduct[i].title;
+
+
+  let discriptionItem=document.createElement('p');
+  discriptionItem.textContent=this.description;
+  div.appendChild(discriptionItem);
+
+
+  let buttonCart=document.createElement('button');
+  buttonCart.textContent='Add To Cart';
+  div.appendChild(buttonCart);
+
 
       let priceItem = document.createElement('p');
       // priceItem.textContent=this.price;
