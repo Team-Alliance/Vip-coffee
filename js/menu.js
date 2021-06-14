@@ -229,11 +229,9 @@ let item = [];
 // render method
 
 
-let parent = document.getElementById('menu');
-let article = document.getElementById('beverage');
+let parents = document.getElementById('menu');
 // let hElementBev =document.createElement('h1');
 // let hElementSnack=document.createElement('h1');
-parent.appendChild(article);
 // let buttonCart;
 // write code to generate
 // parent.appendChild(article);
@@ -242,38 +240,40 @@ parent.appendChild(article);
 
 
 function render() {
-
-
+  
+  
   for (let i = 0; i < Product.allProduct.length; i++) {
-
-  parent.appendChild(div);
-  let image=document.createElement('img');
-  div.appendChild(image);
-  image.src = this.image;
-
-  let headerTitle=document.createElement('h1');
-  div.appendChild(headerTitle);
-  headerTitle.textContent=this.title;
-
-  let priceItem=document.createElement('p');
-  priceItem.textContent=this.price;
-  div.appendChild(priceItem);
-
-
+    
+    // parent.appendChild(div);
+    // let image=document.createElement('img');
+    // div.appendChild(image);
+    // image.src = this.image;
+    
+    // let headerTitle=document.createElement('h1');
+    // div.appendChild(headerTitle);
+    // headerTitle.textContent=this.title;
+    
+    // let priceItem=document.createElement('p');
+    // priceItem.textContent=this.price;
+    // div.appendChild(priceItem);
+    
+    
     if (Product.allProduct[i].catagory === 'beverage') {
-
-
+      
+      let article = document.getElementById('beverage');
+      parents.appendChild(article);
+      
       // hElementBev.textContent='Baverage';
       let hElement=document.getElementById('hElement');
       article.appendChild(hElement);
       // let article=getElementById
-   
+
       // hElement.textContent='Bevarage';
       let div=document.createElement('div');
-   
+
       hElement.appendChild(div);
 
-     
+
       let image = document.createElement('img');
       div.appendChild(image);
       // image.src = this.imagoducte;
@@ -283,21 +283,9 @@ function render() {
       div.appendChild(headerTitle);
       // headerTitle.textContent=this.title;
       headerTitle.textContent = Product.allProduct[i].title;
-
-
-  let discriptionItem=document.createElement('p');
-  discriptionItem.textContent=this.description;
-  div.appendChild(discriptionItem);
-
-
-  let buttonCart=document.createElement('button');
-  buttonCart.textContent='Add To Cart';
-  div.appendChild(buttonCart);
-
-
       let priceItem = document.createElement('p');
       // priceItem.textContent=this.price;
-      headerTitle.textContent = Product.allProduct[i].price;
+      priceItem.textContent = Product.allProduct[i].price;
       div.appendChild(priceItem);
 
 
@@ -309,6 +297,15 @@ function render() {
       div.appendChild(discriptionItem);
 
 
+      // let discriptionItem=document.createElement('p');
+      // discriptionItem.textContent=this.description;
+      // div.appendChild(discriptionItem);
+
+
+      // let buttonCart=document.createElement('button');
+      // buttonCart.textContent='Add To Cart';
+      // div.appendChild(buttonCart);
+
       let buttonCart = document.createElement('button');
       buttonCart.textContent = 'Add To Cart';
       buttonCart.id = i;
@@ -316,17 +313,22 @@ function render() {
 
       buttonCart.addEventListener('click', submiter);
 
+     
+
+
+
 
 
     } else if (Product.allProduct[i].catagory === 'snacks') {
-
+      let article = document.getElementById('snacks');
+      parents.appendChild(article);
       let hSnack=document.getElementById('hSnack');
       article.appendChild(hSnack);
       // let article=getElementById
-   
+
       // hElement.textContent='Bevarage';
       let div=document.createElement('div');
-   
+
       hSnack.appendChild(div);
       // articleBev=document.getElementById('beverage');
       // parent.appendChild(articleBev);
@@ -346,9 +348,10 @@ function render() {
       // headerTitle.textContent=this.title;
       headerTitle.textContent = Product.allProduct[i].title;
 
+
       let priceItem = document.createElement('p');
       // priceItem.textContent=this.price;
-      headerTitle.textContent = Product.allProduct[i].price;
+      priceItem.textContent = Product.allProduct[i].price;
       div.appendChild(priceItem);
 
 
@@ -377,13 +380,15 @@ function render() {
 
 
     else if (Product.allProduct[i].catagory === 'desserts') {
+      let article = document.getElementById('desserts');
+      parents.appendChild(article);
       let hBverage=document.getElementById('hDess');
       article.appendChild(hBverage);
       // let article=getElementById
-   
+
       // hElement.textContent='Bevarage';
       let div=document.createElement('div');
-   
+
       hBverage.appendChild(div);
       // articleBev=document.getElementById('beverage');
       // parent.appendChild(articleBev);
@@ -403,11 +408,10 @@ function render() {
       // headerTitle.textContent=this.title;
       headerTitle.textContent = Product.allProduct[i].title;
 
-      let priceItem = document.createElement('p');
+        let priceItem = document.createElement('p');
       // priceItem.textContent=this.price;
-      headerTitle.textContent = Product.allProduct[i].price;
+      priceItem.textContent = Product.allProduct[i].price;
       div.appendChild(priceItem);
-
 
 
       let discriptionItem = document.createElement('p');
@@ -434,7 +438,7 @@ function render() {
 
 }
 
-render();
+
 
 
 
@@ -447,9 +451,10 @@ function submiter(event) {
   if (event.target.id) {
 
     item.push(Product.allProduct[event.target.id]);
-         localStorage.setItem('products',JSON.stringify(item));
-
+    localStorage.setItem('products',JSON.stringify(item));
   }
   console.log(item);
+
 }
 
+render();

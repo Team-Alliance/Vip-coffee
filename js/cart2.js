@@ -4,8 +4,23 @@
 // image, title, price, description
 //  new Product('img/hot1.jpg', 'Caffè Americano', 3.49);
 //   new Product('img/hot2.jpg', 'Cappuccino', 3.99);
-//   new Product('img/hot3.jpg', 'Espresso', 4.49);
-let products=[{image:'img/hot1.jpg', title:'Caffè Americano',price: 3.49,description:'some desc'}, {image:'img/hot1.jpg', title:'bbb',price: 3.49,description:'bb'},{image:'img/hot1.jpg', title:'Jamal',price: 3.49,description:'some desc'}];
+//   new Product('img/hot3.jpg', 'Espresso', 4.49);'
+let totalValue=0;
+let products=[{}];
+
+// console.log(data);
+// localStorage.setItem('products',JSON.stringify(item));func
+
+function getData() {
+  let data=localStorage.getItem('products');
+  let dataObj=JSON.parse(data);
+  // console.log(dataObj);
+  if (dataObj!==null) {
+    products=dataObj;
+    console.log(products);
+
+  }
+}
 
 
 function Product (image, title, price){
@@ -15,8 +30,16 @@ function Product (image, title, price){
   this.price = price;
   Product.allproduct.push(this);
 }
-
+getData();
 Product.allproduct = [];
+
+
+function storageUpdate() {
+  let arrString = JSON.stringify(Product.allproduct);
+
+  localStorage.setItem('products', arrString);
+}
+
 // let cart;
 // function loadCart() {
 //   const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
@@ -30,7 +53,7 @@ Product.allproduct = [];
 for (let i = 0; i < products.length; i++) {
 //   console.log(new Product(products[i].image,products[i].title,products[i].price));
   new Product(products[i].image,products[i].title,products[i].price);
-  console.log('hello');
+  console.log(Product.allproduct);
 }
 //console.log(Product.allproduct);
 
@@ -123,8 +146,9 @@ Product.prototype.render = function(){
   // document.getElementById("myDIV").classList.add("mystyle");
   let tdQuantity = document.createElement('td');
   let quantityInput = document.createElement('input');
+  quantityInput.setAttribute('id',this.price);
   tdQuantity.setAttribute('class','quantity');
-
+  quantityInput.addEventListener('change',quantityTotal);
   quantityInput.setAttribute('type', 'number');
   tdQuantity.appendChild(quantityInput);
   tr.appendChild(tdQuantity);
@@ -138,18 +162,55 @@ Product.prototype.render = function(){
 
 
   buttonRemove.addEventListener('click',submitter);
+
+
   let object=this;
-  console.log(object);
-  function submitter() {
+  
+  function submitter(event) {
+    event.preventDefault();
+
     tr.textContent='';
-
+    console.log(object);
     // delete form array
-    Product.allproduct.splice(Product.allproduct.iOf(object),1);
+    for (let i = 0; i < products.length; i++) {
+      console.log(products[i]);
+      if (products[i].title===object.title) {
+        console.log('hello');
+        products.splice(i,1);
+        // Product.allproduct.splice(products.indexOf(object),1);
+      }
+      
+    }
 
-    console.log(Product.allproduct);
+    // localStorage.setItem(JSON.stringify('products',products));
+    localStorage.setItem('products',JSON.stringify(products));
+
+
+    console.log(products);
   }
 
 };
+
+
+
+function quantityTotal(event) {
+  console.log(event.target.value);
+  console.log(event.target.id);
+  let totalQua=document.getElementById('totalQua');
+  totalValue=totalValue+Number(event.target.value )* Number(event.target.id);
+let totalYn=Math.round(totalValue*100)/100;
+  totalQua.textContent=` Total: ${totalYn} `;
+
+  
+
+
+}
+
+
+
+
+// storageUpdate();
+
 function tableFooter(){
   let tfoot = document.getElementById('tfoot');
   let tr = document.createElement('tr');
@@ -160,7 +221,7 @@ function tableFooter(){
   // let productRow = tbody.getElementsByClassName('tr');
   // let total = 0;
   // for (let i = 0; i < Product.allproduct.length; i++) {
-    
+
   //   let tr= productRow[i];
   //   let priceElement=tr.getElementsByClassName('price');
   //   let quantityElement=tr.getElementsByClassName('quantity');
@@ -169,6 +230,7 @@ function tableFooter(){
   //   total=total+(price*quantity);
   // }
   td.textContent = 'Total: $';
+  td.setAttribute('id','totalQua');
 
 }
 tableFooter();
@@ -176,8 +238,16 @@ tableFooter();
 
 //render();
 for (let i = 0; i < Product.allproduct.length; i++) {
+
+  storageUpdate();
+  // let arrString = JSON.stringify(Product.allProducts);
+
+  // localStorage.setItem('product', arrString);
   Product.allproduct[i].render();
+
+
 }
+
 
 // function buttonClick(){
 //   for (let i = 0; i < Product.allproduct.length; i++) {
@@ -192,3 +262,62 @@ for (let i = 0; i < Product.allproduct.length; i++) {
 //     };
 //   }
 // }buttonClick();
+
+let num=0;
+document.addEventListener('DOMContentLoaded', function(){
+  let stars = document.querySelectorAll('.star');
+  stars.forEach(function(star){
+    star.addEventListener('click', setRating);
+  });
+
+  let rating = parseInt(document.querySelector('.stars').getAttribute('data-rating'));
+  let target = stars[rating - 1];
+  target.dispatchEvent(new MouseEvent('click'));
+});
+function setRating(ev){
+  let span = ev.currentTarget;
+  let stars = document.querySelectorAll('.star');
+  let match = false;
+  // let num = 0;
+  stars.forEach(function(star, index){
+    if(match){
+      star.classList.remove('rated');
+    }else{
+      star.classList.add('rated');
+    }
+    //are we currently looking at the span that was clicked
+    if(star === span){
+      match = true;
+      num = index + 1;
+    }
+  });
+  document.querySelector('.stars').setAttribute('data-rating', num);
+  console.log(num);
+}
+
+
+
+// we gona take the num for the local storage
+
+
+function Form(name,location,star) {
+
+  this.name=name;
+  this.location=location;
+  this.star=star;
+  Form.allForm.push(this);
+}
+Form.allForm=[];
+
+function submiter(event) {
+  if (event.target.id) {
+
+    item.push(Product.allProduct[event.target.id]);
+    localStorage.setItem('products',JSON.stringify(item));
+  }
+  console.log(item);
+
+}
+
+// buttonCart.addEventListener('click', submiter);
+
