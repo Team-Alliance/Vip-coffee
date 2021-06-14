@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
     <title>Quiz</title>
 </head>
@@ -58,81 +58,89 @@
 
     </header>
     <main>
-        <h1>Quiz promo code discount</h1>
+
+        <div id='container'>
+            <div id='title'>
+                <h1>Learning Js Properly: Project #1 - Dynamic Quiz</h1>
+            </div>
+            <br />
+            <div id='quiz'></div>
+            <div class='button' id='next'><a href='#'>Next</a></div>
+            <div class='button' id='prev'><a href='#'>Prev</a></div>
+            <div class='button' id='start'> <a href='#'>Start Over</a></div>
+            <!-- <button class='' id='next'>Next</a></button>
+    		<button class='' id='prev'>Prev</a></button>
+    		<button class='' id='start'> Start Over</a></button> -->
+        </div>
+
+        <!-- <h1>Quiz promo code discount</h1>
         <p> Have a chance of winning up to 20% discount on your next purchase by answering these question below </p>
         <form id="quiz">
             <section id="question1">
-            <p>where do we make our coffee beans ?</p><br>
-            <input type="radio" id="jordan" name="answer 1" value="wrong">
-            <label for="jordan">Jordan</label><br>
-            <input type="radio" id="USA" name="answer 1" value="wrong">
-            <label for="USA">USA</label><br>
-            <input type="radio" id="Brazil" name="answer 1" value="right">
-            <!--  -->
-            <label for="Brazil">Brazil</label>
-
-            <button type="button" value="next question"></button>
-        </section>
+                <p>where do we make our coffee beans ?</p><br>
+                <input type="radio" id="jordan" name="answer 1" value="wrong">
+                <label for="jordan">Jordan</label><br>
+                <input type="radio" id="USA" name="answer 1" value="wrong">
+                <label for="USA">USA</label><br>
+                <input type="radio" id="Brazil" name="answer 1" value="right">
+                <label for="Brazil">Brazil</label>
+                <button type="button" value="next question"></button>
+            </section>
 
             <br>
             <br>
             <br>
             <br>
+
             <section id="question2">
+                <p>when did we open our first location ?</p><br>
+                <input type="radio" id="1992" name="answer 2" value="wrong">
+                <label for="y1">1992</label><br>
+                <input type="radio" id="1997" name="answer 2" value="wrong">
+                <label for="y2">1997</label><br>
+                <input type="radio" id="2021" name="answer 2" value="right">
+                <label for="y3">2021</label>
+                <button value="next question"></button>
 
-            <p>when did we open our first location ?</p><br>
-            <input type="radio" id="1992" name="answer 2" value="wrong">
-            <label for="y1">1992</label><br>
-            <input type="radio" id="1997" name="answer 2" value="wrong">
-            <label for="y2">1997</label><br>
-            <input type="radio" id="2021" name="answer 2" value="right">
-            <!--  -->
-            <label for="y3">2021</label>
-            <button  value="next question"></button>
-          
-        </section>
-        <br>
-        <br>
+            </section>
+            <br>
+            <br>
 
             <br>
             <br>
 
             <section id="question3">
-            <p>How long will a coffee plant typically produce coffee if it is well cared for ?</p><br>
-            <input type="radio" id="10 years" name="answer 3" value="right">
-            <label for="10 years">More than 10 years</label><br>
-            <!--  -->
-            <input type="radio" id="25 years" name="answer 3" value="wrong">
-            <label for="25 years">More than 25 years</label><br>
-            <input type="radio" id="15 years" name="answer 3" value="wrong">
-            <label for="15 years">More than 15 years</label>
-            <button  value="next question"></button>
-        </section>
-        <br>
-        <br>
+                <p>How long will a coffee plant typically produce coffee if it is well cared for ?</p><br>
+                <input type="radio" id="10 years" name="answer 3" value="right">
+                <label for="10 years">More than 10 years</label><br>
+                <input type="radio" id="25 years" name="answer 3" value="wrong">
+                <label for="25 years">More than 25 years</label><br>
+                <input type="radio" id="15 years" name="answer 3" value="wrong">
+                <label for="15 years">More than 15 years</label>
+                <button value="next question"></button>
+            </section>
 
+            <br>
+            <br>
             <br>
             <br>
 
             <section id="question4">
-            <p>How many cups of coffee are consumed each year in the world ?</p><br>
-            <input type="radio" id="cups1" name="answer 4" value="wrong">
-            <label for="cups1">900 million</label><br>
-            <input type="radio" id="cups2" name="answer 4" value="wrong">
-            <label for="cups2">2 billion</label><br>
-             <!--  -->
-            <input type="radio" id="cups3" name="answer 4" value="right">
-            <label for="cups3">400 billion</label>
-            <button  value="next question"></button>
-            <br><br>
+                <p>How many cups of coffee are consumed each year in the world ?</p><br>
+                <input type="radio" id="cups1" name="answer 4" value="wrong">
+                <label for="cups1">900 million</label><br>
+                <input type="radio" id="cups2" name="answer 4" value="wrong">
+                <label for="cups2">2 billion</label><br>
+                <input type="radio" id="cups3" name="answer 4" value="right">
+                <label for="cups3">400 billion</label>
+                <button value="next question"></button>
+                <br><br>
+            </section>
 
-            
-        </section>
+            <input type="submit" value="Submit">
+            <section id="answers">
 
-        <input type="submit" value="Submit">
-        <section id="answers">
-
-        </section>
+            </section> -->
 
         </form>
 
@@ -153,6 +161,9 @@
         </div>
 
     </footer>
+    <!-- <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+    <script type="text/javascript" src='questions.json'></script>
+    <script type='text/javascript' src='js/quiz.js'></script> -->
     <script src="js/quiz.js"></script>
 
 </body>
