@@ -101,6 +101,7 @@ Product.prototype.render = function(){
   //for(let i=0; i<Product.allproduct.length;i++){
   let tr = document.createElement('tr');
   tbody.appendChild(tr);
+  tr.setAttribute('class', 'tr');
   console.log('Hello');
 
   let tdImg = document.createElement('td');
@@ -117,10 +118,14 @@ Product.prototype.render = function(){
 
   let tdPrice = document.createElement('td');
   tr.appendChild(tdPrice);
+  tdPrice.setAttribute('class','price');
   tdPrice.textContent =this.price;
-
+  // document.getElementById("myDIV").classList.add("mystyle");
   let tdQuantity = document.createElement('td');
   let quantityInput = document.createElement('input');
+  tdQuantity.setAttribute('class','quantity');
+
+  quantityInput.setAttribute('type', 'number');
   tdQuantity.appendChild(quantityInput);
   tr.appendChild(tdQuantity);
 
@@ -131,6 +136,7 @@ Product.prototype.render = function(){
   buttonRemove.textContent='delete';
 
 
+
   buttonRemove.addEventListener('click',submitter);
   let object=this;
   console.log(object);
@@ -138,12 +144,35 @@ Product.prototype.render = function(){
     tr.textContent='';
 
     // delete form array
-    Product.allproduct.splice(Product.allproduct.indexOf(object),1);
+    Product.allproduct.splice(Product.allproduct.iOf(object),1);
 
     console.log(Product.allproduct);
   }
 
 };
+function tableFooter(){
+  let tfoot = document.getElementById('tfoot');
+  let tr = document.createElement('tr');
+  tfoot.appendChild(tr);
+  let td = document.createElement('td');
+  tr.appendChild(td);
+  // let tbody = document.getElementById('tbody');
+  // let productRow = tbody.getElementsByClassName('tr');
+  // let total = 0;
+  // for (let i = 0; i < Product.allproduct.length; i++) {
+    
+  //   let tr= productRow[i];
+  //   let priceElement=tr.getElementsByClassName('price');
+  //   let quantityElement=tr.getElementsByClassName('quantity');
+  //   let price=priceElement.value;
+  //   let quantity=quantityElement.value;
+  //   total=total+(price*quantity);
+  // }
+  td.textContent = 'Total: $';
+
+}
+tableFooter();
+
 
 //render();
 for (let i = 0; i < Product.allproduct.length; i++) {
