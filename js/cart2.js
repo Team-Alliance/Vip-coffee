@@ -6,7 +6,7 @@
 //   new Product('img/hot2.jpg', 'Cappuccino', 3.99);
 //   new Product('img/hot3.jpg', 'Espresso', 4.49);'
 let totalValue=0;
-let products=[{}];
+let products=[];
 
 // console.log(data);
 // localStorage.setItem('products',JSON.stringify(item));func
@@ -20,6 +20,12 @@ function getData() {
     console.log(products);
 
   }
+  // if(localStorage.getItem('form')){
+  //   let addstorage =JSON.parse(localStorage.getItem('form'));
+  //   for(let e =0; e<addstorage.length; e++){
+  //     let saveDivice = new Form( addstorage[e].firstName , addstorage[e].lastName , addstorage[e].location);
+  //   }
+  // }
 }
 
 
@@ -165,7 +171,7 @@ Product.prototype.render = function(){
 
 
   let object=this;
-  
+
   function submitter(event) {
     event.preventDefault();
 
@@ -179,7 +185,7 @@ Product.prototype.render = function(){
         products.splice(i,1);
         // Product.allproduct.splice(products.indexOf(object),1);
       }
-      
+
     }
 
     // localStorage.setItem(JSON.stringify('products',products));
@@ -198,10 +204,10 @@ function quantityTotal(event) {
   console.log(event.target.id);
   let totalQua=document.getElementById('totalQua');
   totalValue=totalValue+Number(event.target.value )* Number(event.target.id);
-let totalYn=Math.round(totalValue*100)/100;
+  let totalYn=Math.round(totalValue*100)/100;
   totalQua.textContent=` Total: ${totalYn} `;
 
-  
+
 
 
 }
@@ -272,7 +278,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   let rating = parseInt(document.querySelector('.stars').getAttribute('data-rating'));
   let target = stars[rating - 1];
-  target.dispatchEvent(new MouseEvent('click'));
+  // target.dispatchEvent(new MouseEvent('click'));
 });
 function setRating(ev){
   let span = ev.currentTarget;
@@ -300,24 +306,75 @@ function setRating(ev){
 // we gona take the num for the local storage
 
 
-function Form(name,location,star) {
+// function Form(name,location,star) {
 
-  this.name=name;
+//   this.name=name;
+//   this.location=location;
+//   this.star=star;
+//   Form.allForm.push(this);
+// }
+// Form.allForm=[];
+
+// function submiter(event) {
+//   if (event.target.id) {
+
+//     item.push(Product.allProduct[event.target.id]);
+//     localStorage.setItem('products',JSON.stringify(item));
+//   }
+//   console.log(item);
+
+// }
+
+// we gona take the num for the local storage
+function storingRating() {
+  localStorage.setItem('rating',JSON.stringify(Form.allForm));
+}
+
+let forms=[];
+function Form(firstName,lastName,location,rating) {
+  this.firstName=firstName;
+  this.lastName=lastName;
   this.location=location;
-  this.star=star;
+  this.rating=num;
+  // this.numOfStar=numOfStar;
   Form.allForm.push(this);
+  console.log(this);
 }
 Form.allForm=[];
+let checkout=document.getElementById('form');
+checkout.addEventListener('submit', handlerSubmitter);
+// let form = document.getElementById('form');
+function handlerSubmitter(event){
+  event.preventDefault();
+  // Removing all items from the cart page once the checkout is clicked;
+  tbody.textContent = ' ';
+  localStorage.removeItem('products');
+  alert('Thank You for your purchase, Your rating will be in the home page');
+  // Saving data;
+  let name=event.target.firstname.value;
+  let lastName=event.target.lastname.value;
+  let location= event.target.country.value;
 
-function submiter(event) {
-  if (event.target.id) {
 
-    item.push(Product.allProduct[event.target.id]);
-    localStorage.setItem('products',JSON.stringify(item));
-  }
-  console.log(item);
+
+  new Form(name,lastName,location);
+  console.log(Form.allForm);
+  storingRating();
+  // We need to get an id for our data;
+  // if(event.target.id){
+  //   forms.push(Form.allForm[event.target.id]);
+  //   for(let i =0; i<Form.allForm.length; i++){
+  //     new Form( Form.allForm[i].firstName , Form.allForm[i].lastName , Form.allForm[i].location);
+  //   }
+  // }
+  let stars = document.querySelectorAll('.star');
+  stars.forEach(function(star, index){
+
+    star.classList.remove('rated');
+  });
 
 }
-
-// buttonCart.addEventListener('click', submiter);
+// handlersubmit ,  you should take the data from the form and pass them to the constructor and creat new Form object
+// send the Form.allForm array to the local storage
+//new Form ()
 

@@ -275,7 +275,7 @@ function displayScore() {
 
   score.textContent = 'You got ' + numCorrect + ' questions out of ' +
     questions.length + ' right!!!';
-  console.log('score', numCorrect)
+  console.log('score', numCorrect);
   return score;
 }
 
