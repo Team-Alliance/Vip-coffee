@@ -163,7 +163,7 @@ Product.prototype.render = function(){
   let buttonRemove = document.createElement('button');
   tdRemove.appendChild(buttonRemove);
   tr.appendChild(tdRemove);
-  buttonRemove.textContent='delete';
+  buttonRemove.textContent='Delete';
 
 
 
@@ -205,7 +205,7 @@ function quantityTotal(event) {
   let totalQua=document.getElementById('totalQua');
   totalValue=totalValue+Number(event.target.value )* Number(event.target.id);
   let totalYn=Math.round(totalValue*100)/100;
-  totalQua.textContent=` Total: ${totalYn} `;
+  totalQua.textContent=` Total:$ ${totalYn} `;
 
 
 
@@ -235,7 +235,7 @@ function tableFooter(){
   //   let quantity=quantityElement.value;
   //   total=total+(price*quantity);
   // }
-  td.textContent = 'Total: $';
+  td.textContent = 'Total: $0';
   td.setAttribute('id','totalQua');
 
 }
