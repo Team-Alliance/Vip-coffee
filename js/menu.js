@@ -177,7 +177,6 @@
 
 // generateProducts();
 
-
 function Product(image, title, price, description, catagory) {
   this.image = image;
   this.title = title;
@@ -240,32 +239,32 @@ let parents = document.getElementById('menu');
 
 
 function render() {
-  
-  
+
+
   for (let i = 0; i < Product.allProduct.length; i++) {
-    
+
     // parent.appendChild(div);
     // let image=document.createElement('img');
     // div.appendChild(image);
     // image.src = this.image;
-    
+
     // let headerTitle=document.createElement('h1');
     // div.appendChild(headerTitle);
     // headerTitle.textContent=this.title;
-    
+
     // let priceItem=document.createElement('p');
     // priceItem.textContent=this.price;
     // div.appendChild(priceItem);
-    
-    
+
+
     if (Product.allProduct[i].catagory === 'beverage') {
       
-      let article = document.getElementById('beverage');
-      parents.appendChild(article);
+      let articleBev = document.getElementById('beverage');
       
+      parents.appendChild(articleBev);
       // hElementBev.textContent='Baverage';
       let hElement=document.getElementById('hElement');
-      article.appendChild(hElement);
+      articleBev.appendChild(hElement);
       // let article=getElementById
 
       // hElement.textContent='Bevarage';
@@ -313,17 +312,18 @@ function render() {
 
       buttonCart.addEventListener('click', submiter);
 
-     
+
+
 
 
 
 
 
     } else if (Product.allProduct[i].catagory === 'snacks') {
-      let article = document.getElementById('snacks');
-      parents.appendChild(article);
+      let articleSnack = document.getElementById('snacks');
+      parents.appendChild(articleSnack);
       let hSnack=document.getElementById('hSnack');
-      article.appendChild(hSnack);
+      articleSnack.appendChild(hSnack);
       // let article=getElementById
 
       // hElement.textContent='Bevarage';
@@ -380,10 +380,10 @@ function render() {
 
 
     else if (Product.allProduct[i].catagory === 'desserts') {
-      let article = document.getElementById('desserts');
-      parents.appendChild(article);
+      let articleDess = document.getElementById('desserts');
+      parents.appendChild(articleDess);
       let hBverage=document.getElementById('hDess');
-      article.appendChild(hBverage);
+      articleDess.appendChild(hBverage);
       // let article=getElementById
 
       // hElement.textContent='Bevarage';
@@ -408,7 +408,7 @@ function render() {
       // headerTitle.textContent=this.title;
       headerTitle.textContent = Product.allProduct[i].title;
 
-        let priceItem = document.createElement('p');
+      let priceItem = document.createElement('p');
       // priceItem.textContent=this.price;
       priceItem.textContent = Product.allProduct[i].price;
       div.appendChild(priceItem);
@@ -441,19 +441,30 @@ function render() {
 
 
 
+// let userAtt=0;
 
 
 
 
 
-
+// userAtt++;
 function submiter(event) {
+
+
   if (event.target.id) {
 
     item.push(Product.allProduct[event.target.id]);
     localStorage.setItem('products',JSON.stringify(item));
+    alert('You Added To Cart');
+    // console.log('hello');
   }
-  console.log(item);
+  // else if (event.target.id===item.name) {
+  //   console.log('hello');
+  //   // localStorage.removeItem()
+
+  // }
+  // console.log(item);
+  // console.log(event.target.id);
 
 }
 
