@@ -1,19 +1,37 @@
 
 body{
-  width: 900px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  width: 100%;
   margin: 0 auto;
-  background-color: #f1f1f1;
-}
-header{
-  background-color: #030303;
+  /* background-color: #DEEDF0 */
+  /* background-color: #F0F0F0 */
+  /* background-color: #F4CCA4 */
+  /* background-color: #E7E6E1 */
+  background-color: #F7E9E3
+  
 }
 header{
   height: 80px;
-  width: 900px;
+  width: 100%;
   position: relative;
+  background-color: #030303;
 }
+h1 {
+  margin-left: 5%;
+  position: absolute;
+  padding-top: 2%;
+  color: #f1f1f1;
+}
+h1 a {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
 nav{
-float: right;
+  margin-right: 5%;
+ padding-top: 1%;
+ float: right; 
 }
 nav ul li{
   display: inline;
@@ -22,8 +40,11 @@ nav ul li{
 /* this will be for other tabs in header  */
 
 .dropbtn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
   background-color: #030303;
-  color: white;
+  color: #f1f1f1;
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -34,49 +55,44 @@ nav ul li{
   display: inline-block;
 }
 .dropdown-content {
+  border-radius: 9px;
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #1E212D;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 .dropdown-content a {
   cursor: pointer;
-  color: black;
+  color: #f1f1f1;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
 /* this is for hover only for menu  */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: #ddd; border-radius: 9px;}
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {background-color: #1E212D;}
 
 
 * {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
+/* body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;} */
 img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 80%;
   position: relative;
   margin: auto;
 }
-/* Caption text */
-.text {
-  color: #F2F2F2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
+.imgPic{
   width: 100%;
-  text-align: center;
+  margin: 0%;
 }
 
 
@@ -118,38 +134,46 @@ img {vertical-align: middle;}
   position: relative;
 }
 #videoEdit{
-width: 47%;
+width: 40%;
+margin-left: 3%;
 }
 video{
   margin-top: 10%;
   position:absolute
+  
 }
 #introduction-right{
-  margin-left: 50%;
+  margin-left: 45%;
   margin-top: 10%;
+  margin-right: 3%;
   line-height: 20px;
+  font-weight: 500;
   /* font-size: 20px; */
-  /* text-indent: 50px;
-  text-align: justify; */
+  /* text-indent: 50px; */
+  text-align: justify;
   position:absolute
-  
+}
+#introduction-right h2 {
+
+  font-size: 35px;
+
 }
 
 
 /* card-container */
 #container {
   font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
-  margin: 500px 0;
+  margin: 800px 0;
 }
 .card-container {
   display:inline-block;
   cursor: pointer;
-  height: 350px;
+  height: 550px;
   perspective: 600;
   position: relative;
-  width: 220px;
-  padding-left: 90px;
-  margin: 10px
+  width: 320px;
+  padding-left: 7%;
+  margin-left: 8%;
 }
 .card {
   height: 100%;
@@ -170,17 +194,30 @@ video{
   width: 100%;
 }
 .card .back {
-  background: #eaeaed;
-  color: #0087cc;
+  background: #FFBD9B;
+  padding-top: 40%;
+  color: #030303;
+  font-weight: 700;
+  font-size: 150%;
   line-height: 150px;
   text-align: center;
   transform: rotateY(180deg);
+}
+#pic1{
+  width: 128%;
+}
+#pic2{
+  width: 148%;
+}
+#pic3{
+  width: 128%;
 }
 
 
 /* footer style sheet  */
 
 footer{
+  margin: 0%;
   height: 50%;
 background-color: #030303;
 }
@@ -199,5 +236,19 @@ background-color: #030303;
 #footerTwo {
   color: #f1f1f1;
   line-height: 20px;
+  padding-bottom: 1%;
   margin-left: 20%;
+  text-align: -webkit-center
+}
+#logo{
+  color: #f1f1f1;
+  position: absolute;
+
+  margin-left: 3.5%;
+  margin-top: 3% ;
+}
+#logo a{
+  text-decoration: none;
+  color: #f1f1f1;
+
 }
