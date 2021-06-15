@@ -25,9 +25,9 @@
 
                         </a>
                         <div class="dropdown-content">
-                            <a href="#beverage">Beverage</a>
-                            <a href="#snacks">Snacks</a>
-                            <a href="#desserts">Sweets</a>
+                            <a href="menu.html#beverage">Beverage</a>
+                            <a href="menu.html#snacks">Snacks</a>
+                            <a href="menu.html#desserts">Sweets</a>
                         </div>
                     </div>
                 </li>
@@ -59,31 +59,11 @@
     </header>
     <main>
 
-        <section id="cartInfo">
-            <div id="cart-container" class="card">
-                <table id="cart">
-                    <thead>
-                        <tr>
-                            <!-- Image -->
-                            <th>Item</th>
-                            <!-- Name -->
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>Remove</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody"></tbody>
-                    <tfoot></tfoot>
-                </table>
-            </div>
-        </section>
-<!-- answers     -->
-        <section id = "personalInfo">
+        <section id="personalInfo">
 
             <h1>Personal Information</h1>
             <div class="container">
-                <form>
+                <form id="form">
                     <div class="row">
                         <div class="col-25">
                             <label for="fname">First Name</label>
@@ -137,10 +117,51 @@
                                 style="height:200px"></textarea>
                         </div>
                     </div>
+                    
+                    <div>
+
+                        <h1>Star Rating System</h1>
+                        <div class="stars" data-rating="0">
+                            <span class="star">&nbsp;</span>
+                            <span class="star">&nbsp;</span>
+                            <span class="star">&nbsp;</span>
+                            <span class="star">&nbsp;</span>
+                            <span class="star">&nbsp;</span>
+                        </div>
+
+
+                    </div>
                     <div class="row">
-                        <input type="submit" value="Checkout">
+                        <input id="Checkout" type="submit" value="Checkout">
                     </div>
                 </form>
+
+                    <section id="cartInfo">
+                        <div id="cart-container" class="card">
+                            <table id="cart">
+                                <thead>
+                                    <tr>
+                                        <!-- Image -->
+
+                                        <th>Image</th>
+                                        <th>Title</th>
+                                        <!-- Name -->
+
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody">
+
+                                </tbody>
+                                <tfoot id="tfoot"></tfoot>
+                            </table>
+                        </div>
+                    </section>
+                    <!-- answers     -->
+
+         
             </div>
         </section>
 
@@ -161,7 +182,8 @@
         </div>
 
     </footer>
-
+    <script src="js/menu.js"></script>
+    <script src="js/cart2.js"></script>
 </body>
 
 </html>

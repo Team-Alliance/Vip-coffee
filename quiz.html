@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,15 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
     <title>Quiz</title>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
     <header>
-          
-        <a href="index.html"><img src="img/coffeelogo.png" alt="logo"></a>
+        <div class=".main-logo">
+            <h1><a href="index.html">Vip Coffee</a></h1>
+            <!-- <a href="index.html"><img src="img/coffeelogo.png" alt="logo"></a> -->
+          </div>
 
         <nav>
             <ul>
@@ -23,27 +28,33 @@
 
                         </a>
                         <div class="dropdown-content">
-                            <a href="#beverage">Beverage</a>
-                            <a href="#snacks">Snacks</a>
-                            <a href="#desserts">Sweets</a>
+                            <a href="menu.html#beverage">Beverage</a>
+                            <a href="menu.html#snacks">Snacks</a>
+                            <a href="menu.html#desserts">Sweets</a>
                         </div>
                     </div>
                 </li>
-                <li> <div class="dropdown">
-                    <a href="cart.html">
-                        <button class="dropbtn">Cart</button>
+                <li>
+                    <div class="dropdown">
+                        <a href="cart.html">
+                            <button class="dropbtn">Cart</button>
 
-                    </a></li>
-                <li> <div class="dropdown">
-                    <a href="quiz.html">
-                        <button class="dropbtn">Quiz</button>
+                        </a>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <a href="quiz.html">
+                            <button class="dropbtn">Quiz</button>
 
-                    </a></li>
-                <li> <div class="dropdown">
-                    <a href="about.html">
-                        <button class="dropbtn">About US</button>
+                        </a>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <a href="about.html">
+                            <button class="dropbtn">About US</button>
 
-                    </a></li>
+                        </a>
+                </li>
             </ul>
         </nav>
 
@@ -51,22 +62,116 @@
     </header>
     <main>
 
+        <div id='container'>
+            <div id='title'>
+                <h1>VIP QUIZ</h1>
+                <br>
+            </div>
+            <br />
+            <div id='quiz'></div>
+            <div class='button' id='next'><a href='#'>Next</a></div>
+            <div class='button' id='prev' style="display: none;"><a href='#'>Prev</a></div>
+            <div class='button' id='start'> <a href='#'>Start Over</a></div>
+            <!-- <button class='' id='next'>Next</a></button>
+    		<button class='' id='prev'>Prev</a></button>
+    		<button class='' id='start'> Start Over</a></button> -->
+            <div id='score'></div>
+        </div>
+
+        <!-- <h1>Quiz promo code discount</h1>
+        <p> Have a chance of winning up to 20% discount on your next purchase by answering these question below </p>
+        <form id="quiz">
+            <section id="question1">
+                <p>where do we make our coffee beans ?</p><br>
+                <input type="radio" id="jordan" name="answer 1" value="wrong">
+                <label for="jordan">Jordan</label><br>
+                <input type="radio" id="USA" name="answer 1" value="wrong">
+                <label for="USA">USA</label><br>
+                <input type="radio" id="Brazil" name="answer 1" value="right">
+                <label for="Brazil">Brazil</label>
+                <button type="button" value="next question"></button>
+            </section>
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <section id="question2">
+                <p>when did we open our first location ?</p><br>
+                <input type="radio" id="1992" name="answer 2" value="wrong">
+                <label for="y1">1992</label><br>
+                <input type="radio" id="1997" name="answer 2" value="wrong">
+                <label for="y2">1997</label><br>
+                <input type="radio" id="2021" name="answer 2" value="right">
+                <label for="y3">2021</label>
+                <button value="next question"></button>
+
+            </section>
+            <br>
+            <br>
+
+            <br>
+            <br>
+
+            <section id="question3">
+                <p>How long will a coffee plant typically produce coffee if it is well cared for ?</p><br>
+                <input type="radio" id="10 years" name="answer 3" value="right">
+                <label for="10 years">More than 10 years</label><br>
+                <input type="radio" id="25 years" name="answer 3" value="wrong">
+                <label for="25 years">More than 25 years</label><br>
+                <input type="radio" id="15 years" name="answer 3" value="wrong">
+                <label for="15 years">More than 15 years</label>
+                <button value="next question"></button>
+            </section>
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <section id="question4">
+                <p>How many cups of coffee are consumed each year in the world ?</p><br>
+                <input type="radio" id="cups1" name="answer 4" value="wrong">
+                <label for="cups1">900 million</label><br>
+                <input type="radio" id="cups2" name="answer 4" value="wrong">
+                <label for="cups2">2 billion</label><br>
+                <input type="radio" id="cups3" name="answer 4" value="right">
+                <label for="cups3">400 billion</label>
+                <button value="next question"></button>
+                <br><br>
+            </section>
+
+            <input type="submit" value="Submit">
+            <section id="answers">
+
+            </section> -->
+
+        </form>
+
+
     </main>
 
     <footer>
         <div id="footer">
 
             <ul>
-              <li><a href="#"><img class="icon" src="img/facebookLogo.png" alt=""></a></li>
-              <li><a href="#"><img class="icon" src="img/instaLogo.png" alt=""></a></li>
-              <li><a href="#"><img class="icon" src="img/pinlogo.png" alt=""></a></li>
+                <li><a href="#"><img class="icon" src="img/facebookLogo.png" alt=""></a></li>
+                <li><a href="#"><img class="icon" src="img/instaLogo.png" alt=""></a></li>
+                <li><a href="#"><img class="icon" src="img/pinlogo.png" alt=""></a></li>
             </ul>
             <p>&copy;2021</p>
             <p>contacts</p>
-      
-          </div>
+
+        </div>
 
     </footer>
-    
+    <!-- <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+    <script type="text/javascript" src='questions.json'></script>
+    <script type='text/javascript' src='js/quiz.js'></script> -->
+    <script src="js/quiz.js"></script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+
 </body>
+
 </html>
