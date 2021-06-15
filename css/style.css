@@ -9,7 +9,7 @@ header{
 }
 header{
   height: 80px;
-  width: 900px;
+  width: 100%;
   position: relative;
 }
 nav{
