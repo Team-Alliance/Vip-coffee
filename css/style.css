@@ -14,8 +14,9 @@ body{
 header{
   height: 80px;
   width: 100%;
-  position: relative;
+  position: fixed;
   background-color: #030303;
+  z-index: 1;
 }
 h1 {
   margin-left: 5%;
@@ -251,4 +252,7 @@ background-color: #030303;
   text-decoration: none;
   color: #f1f1f1;
 
+}
+#show{
+  background: #970e0e;
 }
