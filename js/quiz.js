@@ -91,8 +91,8 @@ next.addEventListener('click', function (e) {
       icon: 'error',
       title: 'Oops...',
       text: 'Please make a selection!',
-     
-    })
+
+    });
   } else {
     questionCounter++;
     displayNext();
@@ -149,22 +149,22 @@ function createQuestionElement(index) {
   let header = document.createElement('h2');
   header.textContent = `Question  ${index + 1}  :`;
 
- 
-  let br3=document.createElement('br');
+
+  let br3 = document.createElement('br');
   header.appendChild(br3);
-  
+
 
   qElement.appendChild(header);
-  
+
 
   let pTag = document.createElement('p');
 
   pTag.textContent = questions[index].question;
 
   qElement.appendChild(pTag);
-  let br1=document.createElement('br');
+  let br1 = document.createElement('br');
   pTag.appendChild(br1);
-  let br2=document.createElement('br');
+  let br2 = document.createElement('br');
   pTag.appendChild(br2);
 
   let radioButtons = createRadios(index);
@@ -182,7 +182,7 @@ function createRadios(index) {
   for (let i = 0; i < questions[index].choices.length; i++) {
     // item = $('<li>');
     item = document.createElement('li');
-    
+
     let input = document.createElement('input');
     input.style.display = 'inline';
     input.setAttribute('type', 'radio');
@@ -193,15 +193,15 @@ function createRadios(index) {
 
     let label = document.createElement('label');
     label.setAttribute('for', i);
-    label.setAttribute('id','answer');
+    label.setAttribute('id', 'answer');
 
 
     // input = '<input type="radio" name="answer" value=' + i + ' />';
     label.textContent = questions[index].choices[i];
     // let br1=document.createElement('br');
     // item.appendChild(br1);
-  
-    let br2=document.createElement('br');
+
+    let br2 = document.createElement('br');
     radioList.appendChild(br2);
     item.appendChild(input);
     item.appendChild(label);
@@ -306,7 +306,7 @@ function displayScore() {
   return score;
 }
 
-let discount=0;
+let discount = 0;
 const rand = Math.random().toString(16).substr(2, 8);
 localStorage.setItem('promo', rand);
 
@@ -316,29 +316,29 @@ function promotions(correct) {
     Swal.fire(`Congratulation, you have won 20% discount, your promo code is: ${rand}`);
 
     // alert(`Congratulation, you have won 20% discount, your promo code is: ${rand}` );
-    discount= 0.20;
+    discount = 0.20;
   }
   else if (correct === 3) {
     Swal.fire(`Congratulation, you have won 15% discount, your promo code is: ${rand}`);
     // alert(`Congratulation, you have won 15% discount, your promo code is: ${rand} `);
-    discount= 0.15;
+    discount = 0.15;
   }
   else if (correct === 2) {
     Swal.fire(`Congratulation, you have won 10% discount, your promo code is: ${rand}`);
     // alert(`Congratulation, you have won 10% discount, your promo code is:  ${rand}`);
-    discount= 0.10;
+    discount = 0.10;
   }
   else if (correct === 1) {
     Swal.fire(`Congratulation, you have won 5% discount, your promo code is: ${rand}`);
     // alert(`Congratulation, you have won 5% discount, your promo code is:  ${rand}`);
-    discount=.05;
+    discount = .05;
   }
   else {
     Swal.fire(`Unfortunately,try again later!`);
     // alert('Unfortunately,try again later!');
   }
 }
- 
+
 
 /*
 let promo= localStorage.getItem('promo');
