@@ -300,6 +300,7 @@ function displayScore() {
   score.textContent = 'You got ' + numCorrect + ' questions out of ' +
     questions.length + ' right!!!';
   console.log('score', numCorrect);
+
   promotions(numCorrect);
   localStorage.setItem('discount', discount);
   return score;
