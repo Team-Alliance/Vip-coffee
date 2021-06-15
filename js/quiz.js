@@ -86,7 +86,13 @@ next.addEventListener('click', function (e) {
 
   // If no user selection, progress is stopped
   if (isNaN(selections[questionCounter])) {
-    alert('Please make a selection!');
+    // alert('Please make a selection!');
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Please make a selection!',
+     
+    })
   } else {
     questionCounter++;
     displayNext();
@@ -143,13 +149,23 @@ function createQuestionElement(index) {
   let header = document.createElement('h2');
   header.textContent = `Question  ${index + 1}  :`;
 
+ 
+  let br3=document.createElement('br');
+  header.appendChild(br3);
+  
+
   qElement.appendChild(header);
+  
 
   let pTag = document.createElement('p');
 
   pTag.textContent = questions[index].question;
 
   qElement.appendChild(pTag);
+  let br1=document.createElement('br');
+  pTag.appendChild(br1);
+  let br2=document.createElement('br');
+  pTag.appendChild(br2);
 
   let radioButtons = createRadios(index);
   qElement.append(radioButtons);
@@ -162,26 +178,34 @@ function createRadios(index) {
   // let radioList = $('<ul>');
   let radioList = document.createElement('ul');
   let item;
-  let input = '';
+  // let input = '';
   for (let i = 0; i < questions[index].choices.length; i++) {
     // item = $('<li>');
     item = document.createElement('li');
+    
     let input = document.createElement('input');
-    input.style.display = 'block';
+    input.style.display = 'inline';
     input.setAttribute('type', 'radio');
     input.setAttribute('name', 'answer');
     input.setAttribute('value', i);
     input.setAttribute('id', i);
+    radioList.appendChild(item);
 
     let label = document.createElement('label');
     label.setAttribute('for', i);
+    label.setAttribute('id','answer');
 
-    item.appendChild(label);
 
     // input = '<input type="radio" name="answer" value=' + i + ' />';
     label.textContent = questions[index].choices[i];
+    // let br1=document.createElement('br');
+    // item.appendChild(br1);
+  
+    let br2=document.createElement('br');
+    radioList.appendChild(br2);
     item.appendChild(input);
-    radioList.appendChild(item);
+    item.appendChild(label);
+
   }
   return radioList;
 }
@@ -210,7 +234,7 @@ function displayNext() {
   quiz.style.display = 'none';
 
   //TODO get elementById then remove element
-  let test = document.getElementById('question')
+  let test = document.getElementById('question');
   if (test) {
     test.remove();
 
@@ -219,12 +243,12 @@ function displayNext() {
   if (questionCounter < questions.length) {
     let nextQuestion = createQuestionElement(questionCounter);
     //TODO fadeIn =>>>> style.display='block'
-    quiz.appendChild(nextQuestion)
+    quiz.appendChild(nextQuestion);
     quiz.style.display = 'block';
 
     if (!(isNaN(selections[questionCounter]))) {
       // TODO get input and make the input checked
-      $('input[value=' + selections[questionCounter] + ']').prop('checked', true);
+      // $('input[value=' + selections[questionCounter] + ']').prop('checked', true);
 
 
     }
@@ -232,7 +256,7 @@ function displayNext() {
     // Controls display of 'prev' button
     if (questionCounter === 1) {
       // TODO get prev and disp;ay block
-      document.getElementById('prev').style.display = 'block';
+      document.getElementById('prev').style.display = 'none';
     } else if (questionCounter === 0) {
       // TODO get next and prev and display none and block
       // $('#prev').hide();
@@ -276,6 +300,53 @@ function displayScore() {
   score.textContent = 'You got ' + numCorrect + ' questions out of ' +
     questions.length + ' right!!!';
   console.log('score', numCorrect);
+
+  promotions(numCorrect);
+  localStorage.setItem('discount', discount);
   return score;
 }
 
+let discount=0;
+const rand = Math.random().toString(16).substr(2, 8);
+localStorage.setItem('promo', rand);
+
+
+function promotions(correct) {
+  if (correct === 4) {
+    Swal.fire(`Congratulation, you have won 20% discount, your promo code is: ${rand}`);
+
+    // alert(`Congratulation, you have won 20% discount, your promo code is: ${rand}` );
+    discount= 0.20;
+  }
+  else if (correct === 3) {
+    Swal.fire(`Congratulation, you have won 15% discount, your promo code is: ${rand}`);
+    // alert(`Congratulation, you have won 15% discount, your promo code is: ${rand} `);
+    discount= 0.15;
+  }
+  else if (correct === 2) {
+    Swal.fire(`Congratulation, you have won 10% discount, your promo code is: ${rand}`);
+    // alert(`Congratulation, you have won 10% discount, your promo code is:  ${rand}`);
+    discount= 0.10;
+  }
+  else if (correct === 1) {
+    Swal.fire(`Congratulation, you have won 5% discount, your promo code is: ${rand}`);
+    // alert(`Congratulation, you have won 5% discount, your promo code is:  ${rand}`);
+    discount=.05;
+  }
+  else {
+    Swal.fire(`Unfortunately,try again later!`);
+    // alert('Unfortunately,try again later!');
+  }
+}
+ 
+
+/*
+let promo= localStorage.getItem('promo');
+let disc = Number( localStorage.getItem('discount'));
+
+// after get the user input from the form
+if (userInput === promo ){
+  let Totalprice = price - (price*disc)
+}
+
+*/
