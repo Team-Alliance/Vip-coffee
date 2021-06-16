@@ -12,7 +12,7 @@ body{
   /* background-color: #F0F0F0 */
   /* background-color: #F4CCA4 */
   /* background-color: #E7E6E1 */
-  background-color: #F7E9E3
+  background-color: lightgrey;
   
 }
 header{
@@ -21,13 +21,13 @@ header{
   position: relative;
   background-color: #030303;
 }
-h1 {
+header h1 {
   margin-left: 5%;
   position: absolute;
   padding-top: 2%;
   color: #f1f1f1;
 }
-h1 a {
+header h1 a {
   text-decoration: none;
   color: #f1f1f1;
 }
@@ -129,13 +129,13 @@ nav ul li{
     float: right;
    
     /* background-color: #585757; */
-    background-color: #CC9B6D;
+    background-color: lightgrey;
     color: black;
     margin: 0 2px 0 2px;
 }
 
 .button.active {
-    background-color: #F8F8FF;
+    background-color: #CC9B6D;;
     color: #525252;
 }
 
@@ -170,8 +170,12 @@ button {
 
   #quiz ul {
     /* list-style-type: none; */
+    
     padding: 2%;
     margin: 2%;
+    margin-bottom: 6%;
+
+
 }
 
 #prev {
@@ -193,7 +197,9 @@ right: 64%; */
     padding-right: 78%; */
 /* } */
 
-
+h2{
+  font-size: 25px;
+}
 
 #quiz h2{
   margin-bottom: 4%;
