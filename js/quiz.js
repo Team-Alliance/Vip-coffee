@@ -86,13 +86,14 @@ next.addEventListener('click', function (e) {
 
   // If no user selection, progress is stopped
   if (isNaN(selections[questionCounter])) {
-    // alert('Please make a selection!');
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'Please make a selection!',
+    Swal.fire('Please make a selection to get the discount !');
+    
+    // Swal.fire({
+    //   icon: 'error',
+    //   title: 'Oops...',
+    //   text: 'Please make a selection!',
 
-    });
+    // });
   } else {
     questionCounter++;
     displayNext();
@@ -298,7 +299,8 @@ function displayScore() {
   }
 
   score.textContent = 'You got ' + numCorrect + ' questions out of ' +
-    questions.length + ' right!!!';
+    questions.length + ' right!';
+
   console.log('score', numCorrect);
 
   promotions(numCorrect);
