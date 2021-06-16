@@ -7,13 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/cart.css">
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <title>Cart</title>
 </head>
 
 <body>
     <header>
+        <div class=".main-logo">
+            <h1><a href="index.html">Vip Coffee</a></h1>
+            <!-- <a href="index.html"><img src="img/coffeelogo.png" alt="logo"></a> -->
+          </div>
 
-        <a href="index.html"><img src="img/coffeelogo.png" alt="logo"></a>
+        <!-- <a href="index.html"><img src="img/coffeelogo.png" alt="logo"></a> -->
 
         <nav>
             <ul>
@@ -117,10 +127,21 @@
                                 style="height:200px"></textarea>
                         </div>
                     </div>
-                    
-                    <div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="promo">Promo Code</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="promo" name="promo" placeholder="Your Promo Code..">
+                        </div>
 
-                        <h1>Star Rating System</h1>
+                    
+                    
+
+                        
+                        <div id="mystars">
+                        <!-- <h1 id="ratings">Raitings & Reviews </h1> -->
+
                         <div class="stars" data-rating="0">
                             <span class="star">&nbsp;</span>
                             <span class="star">&nbsp;</span>
@@ -135,53 +156,66 @@
                         <input id="Checkout" type="submit" value="Checkout">
                     </div>
                 </form>
+        </section>
 
-                    <section id="cartInfo">
-                        <div id="cart-container" class="card">
-                            <table id="cart">
-                                <thead>
-                                    <tr>
-                                        <!-- Image -->
+        <section id="cartInfo">
+            <div id="cart-container" class="card">
+                <table id="cart">
+                    <thead>
+                        <tr>
+                            <!-- Image -->
 
-                                        <th>Image</th>
-                                        <th>Title</th>
-                                        <!-- Name -->
+                            <th>Image</th>
+                            <th>Title</th>
+                            <!-- Name -->
 
-                                        <th>Price</th>
-                                        <th>Quantity</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tbody">
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
 
-                                </tbody>
-                                <tfoot id="tfoot"></tfoot>
-                            </table>
-                        </div>
-                    </section>
-                    <!-- answers     -->
-
-         
+                    </tbody>
+                    <tfoot id="tfoot"></tfoot>
+                </table>
             </div>
         </section>
+        <!-- answers     -->
+
+
+        </div>
+
 
 
 
     </main>
     <footer>
-        <div id="footer">
-
-            <ul>
-                <li><a href="#"><img class="icon" src="img/facebookLogo.png" alt=""></a></li>
-                <li><a href="#"><img class="icon" src="img/instaLogo.png" alt=""></a></li>
-                <li><a href="#"><img class="icon" src="img/pinlogo.png" alt=""></a></li>
-            </ul>
-            <p>&copy;2021</p>
-            <p>contacts</p>
-
+        <div id="logo">
+          <p><a href="index.html">Vip Coffee</a></p>
         </div>
-
-    </footer>
+    
+        <div id="footerOne">
+    
+          <ul>
+            <li><a href="#"><img class="icon" src="img/facebookLogo.png" alt=""></a></li>
+            <li><a href="#"><img class="icon" src="img/instaLogo.png" alt=""></a></li>
+            <li><a href="#"><img class="icon" src="img/pinlogo.png" alt=""></a></li>
+          </ul>
+        </div>
+    
+        <div id="footerTwo">
+          <ul>
+            <li>
+              <p>&copy;Alliance-Team 2021</p>
+              <p>Franchise</p>
+              <P>Contacts</P>
+            </li>
+          </ul>
+        </div>
+    
+    
+      </footer>
     <script src="js/menu.js"></script>
     <script src="js/cart2.js"></script>
 </body>

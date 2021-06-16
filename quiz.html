@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Quiz</title>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -16,16 +19,21 @@
         <div class=".main-logo">
             <h1><a href="index.html">Vip Coffee</a></h1>
             <!-- <a href="index.html"><img src="img/coffeelogo.png" alt="logo"></a> -->
-          </div>
+        </div>
 
         <nav>
             <ul>
                 <li>
-
+                    <div class="dropdown">
+                      <a href="index.html">
+                        <button class="dropbtn">Home</button>
+                      </a>
+                    </div>
+                  </li>
+                <li>
                     <div class="dropdown">
                         <a href="menu.html">
                             <button class="dropbtn">Menu</button>
-
                         </a>
                         <div class="dropdown-content">
                             <a href="menu.html#beverage">Beverage</a>
@@ -40,6 +48,7 @@
                             <button class="dropbtn">Cart</button>
 
                         </a>
+                    </div>
                 </li>
                 <li>
                     <div class="dropdown">
@@ -47,6 +56,7 @@
                             <button class="dropbtn">Quiz</button>
 
                         </a>
+                    </div>
                 </li>
                 <li>
                     <div class="dropdown">
@@ -54,6 +64,7 @@
                             <button class="dropbtn">About US</button>
 
                         </a>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -153,17 +164,29 @@
     </main>
 
     <footer>
-        <div id="footer">
+        <div id="logo">
+            <p><a href="index.html">Vip Coffee</a></p>
+        </div>
+
+        <div id="footerOne">
 
             <ul>
                 <li><a href="#"><img class="icon" src="img/facebookLogo.png" alt=""></a></li>
                 <li><a href="#"><img class="icon" src="img/instaLogo.png" alt=""></a></li>
                 <li><a href="#"><img class="icon" src="img/pinlogo.png" alt=""></a></li>
             </ul>
-            <p>&copy;2021</p>
-            <p>contacts</p>
-
         </div>
+
+        <div id="footerTwo">
+            <ul>
+                <li>
+                    <p>&copy;Alliance-Team 2021</p>
+                    <p>Franchise</p>
+                    <P>Contacts</P>
+                </li>
+            </ul>
+        </div>
+
 
     </footer>
     <!-- <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>

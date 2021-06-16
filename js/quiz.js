@@ -147,15 +147,15 @@ function createQuestionElement(index) {
   qElement.setAttribute('id', 'question');
 
   let header = document.createElement('h2');
+  
   header.textContent = `Question  ${index + 1}  :`;
-
-
+  
+  qElement.appendChild(header);
   let br3 = document.createElement('br');
   header.appendChild(br3);
 
 
-  qElement.appendChild(header);
-
+ 
 
   let pTag = document.createElement('p');
 

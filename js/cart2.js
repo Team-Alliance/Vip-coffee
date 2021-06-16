@@ -163,7 +163,7 @@ Product.prototype.render = function(){
   let buttonRemove = document.createElement('button');
   tdRemove.appendChild(buttonRemove);
   tr.appendChild(tdRemove);
-  buttonRemove.textContent='delete';
+  buttonRemove.textContent='Delete';
 
 
 
@@ -171,10 +171,9 @@ Product.prototype.render = function(){
 
 
   let object=this;
-
+  //  This event listner is responsible for removing items from the cart;
   function submitter(event) {
     event.preventDefault();
-
     tr.textContent='';
     console.log(object);
     // delete form array
@@ -198,14 +197,14 @@ Product.prototype.render = function(){
 };
 
 
-
+let totalQua;
 function quantityTotal(event) {
   console.log(event.target.value);
   console.log(event.target.id);
-  let totalQua=document.getElementById('totalQua');
+  totalQua=document.getElementById('totalQua');
   totalValue=totalValue+Number(event.target.value )* Number(event.target.id);
   let totalYn=Math.round(totalValue*100)/100;
-  totalQua.textContent=` Total: ${totalYn} `;
+  totalQua.textContent=` Total:$ ${totalYn} `;
 
 
 
@@ -235,7 +234,7 @@ function tableFooter(){
   //   let quantity=quantityElement.value;
   //   total=total+(price*quantity);
   // }
-  td.textContent = 'Total: $';
+  td.textContent = 'Total: $0';
   td.setAttribute('id','totalQua');
 
 }
@@ -349,11 +348,14 @@ function handlerSubmitter(event){
   // Removing all items from the cart page once the checkout is clicked;
   tbody.textContent = ' ';
   localStorage.removeItem('products');
-  alert('Thank You for your purchase, Your rating will be in the home page');
+  // alert('Thank You for your purchase, Your rating will be in the home page');
+  Swal.fire('Thank You for your purchase, Your rating will be in the home page');
   // Saving data;
   let name=event.target.firstname.value;
   let lastName=event.target.lastname.value;
   let location= event.target.country.value;
+
+  totalQua.textContent = ' Total $0';
 
 
 
