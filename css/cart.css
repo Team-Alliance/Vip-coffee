@@ -7,7 +7,7 @@ body{
   /* background-color: #F0F0F0 */
   /* background-color: #F4CCA4 */
   /* background-color: #E7E6E1 */
-  background-color: #F7E9E3
+background-color: lightgray;
   
 }
 header{
@@ -79,11 +79,17 @@ nav ul li{
 /* =============================For the form========================= */
 #personalInfo h1{
 text-align: center;
-color: #030303;
+color: #ffffff;
 padding: 20px;
 font-weight: bolder;
+margin-top: 10px;
+margin-left: 43%;
+font-size: 25px;
 
 
+}
+label{
+  font-size: large;
 }
 input[type=text], select, textarea{
   width: 100%;
@@ -93,13 +99,31 @@ input[type=text], select, textarea{
   box-sizing: border-box;
   resize: vertical;
 }
-
+input[type="number" i]{
+  margin-top: 4px;
+  padding: 10px 9px 7px 10px;
+}
+input{
+  background-color:lightgray;
+  color: black;
+  font-size: large;
+}
+#subject{
+  background-color: lightgray;
+  font-size: large;
+}
+#country{
+  background-color: lightgray;
+  font-size: large;
+}
 #form{
   margin-top: 25px;
+  margin-left: -12%;
+  margin-right: 3%;
 }
 /* Style the label to display next to the inputs */
 label {
-  padding: 12px 12px 12px 0;
+  padding: 12px 12px 12px 267px;
   display: inline-block;
 }
 
@@ -112,18 +136,27 @@ input[type=submit] {
   border-radius: 4px;
   cursor: pointer;
   float: right;
+  width: 23%;
+  height: 5%;
+  margin-right: 13%;
+  margin-top: -2%;
+  font-size: xx-large;
 }
 input[type=submit]:hover{
   background-color: #1E212D;
+  
 }
 
 /* Style the container */
 .container {
+  width:88%;
+  margin-left: 100px;
   margin-top: 20px;
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: rgb(56, 55, 55);
   padding: 20px;
   margin-bottom: 20px;
+  color: white;
 }
 
 /* Floating column for labels: 25% width */
@@ -193,6 +226,7 @@ input[type=submit]:hover{
     counter-reset: rateme 0;   
     font-size: 2.0rem;
     font-weight: 900;
+    margin-left: 25%;
 }
 .star.rated{
     counter-increment: rateme 1;
@@ -207,13 +241,17 @@ input[type=submit]:hover{
     width: 50px;
   }
   .tr img{
-    width: 10%;
+    width: 35%;
     border-radius : 50%;
 
   }
+  .tr{
+    font-size: x-large;
+  }
+  
   #cart{
     border-collapse: collapse;
-    width: fit-content;
+    width: 90%;;
     margin: 25px 0;
     font-size: 0.9em;
     font-family: sans-serif;
@@ -221,6 +259,8 @@ input[type=submit]:hover{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     border-spacing: 0.5rem;
     text-align: center;
+    margin-left: 5%;
+    margin-right: 4.5%;
   }
   /* Table header */
   #cart thead tr{
@@ -232,6 +272,7 @@ input[type=submit]:hover{
   #cart td{
     padding: 12px 15px;
     text-align: center;
+    width: 20%;
   }
   #cart #tbody tr{
      border-bottom: 1px solid #dddddd;
@@ -259,13 +300,20 @@ input[type=submit]:hover{
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: x-large;
   }
   button:hover{
     background-color: #1E212D;  
   }
-  .tr{
+  #newTotal{
+    margin-left: 47%;
+    font-weight: bolder;
+    font-size: large;
+    color: #1E212D;
     /* width: 50%; */
   }
+  
+ 
 
 
 
