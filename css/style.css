@@ -11,7 +11,8 @@ body{
   /* background-color: #F0F0F0 */
   /* background-color: #F4CCA4 */
   /* background-color: #E7E6E1 */
-  background-color: #F7E9E3
+  /* background-color: #F7E9E3 */
+  background-color: lightgray;
   
 }
 header{
@@ -138,18 +139,18 @@ img {vertical-align: middle;}
 }
 #videoEdit{
 width: 40%;
-margin-left: 3%;
+margin-left: 10%;
+position:absolute
 }
 video{
   margin-top: 10%;
-  position:absolute
   
 }
 #introduction-right{
-  margin-left: 45%;
+  margin-left: 55%;
   margin-top: 10%;
-  margin-right: 3%;
-  line-height: 20px;
+  margin-right: 11%;
+  line-height: 30px;
   font-weight: 500;
   /* font-size: 20px; */
   /* text-indent: 50px; */
@@ -162,21 +163,59 @@ video{
 
 }
 
+#secondline{
+  /* margin: 5%;
+  margin-top: -3%; */
+  /* width: 100%; */
+  /* clear: both; */
+
+}
+h3{
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 42%;
+  font-weight: 700;
+  font-size: 25px;
+  text-indent: 50px;
+}
 
 /* card-container */
 #container {
   font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
   margin: 800px 0;
+  position: relative;
 }
+
 .card-container {
   display:inline-block;
   cursor: pointer;
   height: 550px;
   perspective: 600;
-  position: relative;
+  position: absolute;
   width: 320px;
-  padding-left: 7%;
-  margin-left: 8%;
+  /* padding-left: 7%; */
+  margin-left: 20%;
+}
+.card-container1 {
+  display:inline-block;
+  cursor: pointer;
+  height: 550px;
+  perspective: 600;
+  position: absolute;
+  width: 320px;
+  /* padding-left: 7%; */
+  margin-left: 43%;
+}
+
+.card-container2 {
+  display:inline-block;
+  cursor: pointer;
+  height: 550px;
+  perspective: 600;
+  position: absolute;
+  width: 320px;
+  /* padding-left: 7%; */
+  margin-left: 65%;
 }
 .card {
   height: 100%;
@@ -197,9 +236,9 @@ video{
   width: 100%;
 }
 .card .back {
-  background: #FFBD9B;
+  background: #1E212D;
   padding-top: 40%;
-  color: #030303;
+  color: #f1f1f1;
   font-weight: 700;
   font-size: 150%;
   line-height: 150px;
@@ -216,9 +255,39 @@ video{
   width: 128%;
 }
 
+/* Rattings section */
+#ratings{
+  margin-top: 3%;
+  margin-left: 45%;
+  color: #030303;
+  font-weight: 700;
+  font-size: 25px;
+  /* text-indent: 50px; */
+  text-align: justify;
+}
+#show{
+  margin: 4%;
+text-align: center;
+background-color: #030303;
+width: 50%;
+margin-left: 30%;
+}
+#show p{
+  color: #f1f1f1;
+  line-height: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  /* text-indent: 50px; */
+  text-align: justify;
+  /* position: absolute */
+}
+#show i{
+  margin-bottom: 12%;
+
+}
+
 
 /* footer style sheet  */
-
 footer{
   margin: 0%;
   height: 50%;
