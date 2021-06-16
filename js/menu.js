@@ -483,12 +483,29 @@ function submiter(event) {
     item.push(Product.allProduct[event.target.id]);
     localStorage.setItem('products',JSON.stringify(item));
     // Swal.fire('You Added To Cart');
-    Swal.fire({
+    // Swal.fire({
+    //   position: 'top-end',
+    //   icon: 'success',
+    //   title: 'You Added To Cart, Come To Quiz Page To Get Discount % ',
+    //   showConfirmButton: false, 
+    //   timer: 1500
+    // })
+
+    const Toast = Swal.mixin({
+      toast: true,
       position: 'top-end',
-      icon: 'success',
-      title: 'You Added To Cart',
       showConfirmButton: false,
-      timer: 1500
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    
+    Toast.fire({
+      icon: 'success',
+      title: 'You Added To Cart, Come To Quiz Page To Get Discount % '
     })
     // console.log('hello');
   }
