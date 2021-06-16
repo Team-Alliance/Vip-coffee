@@ -1,38 +1,77 @@
 
 
+body{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	width: 100%;
+	margin: 0 auto;
+	/* background-color: #DEEDF0 */
+	/* background-color: #F0F0F0 */
+	/* background-color: #F4CCA4 */
+	/* background-color: #E7E6E1 */
+	background-color: #F7E9E3
+	
+  }
+  header{
+	height: 80px;
+	width: 100%;
+	position: relative;
+	background-color: #030303;
+  }
+  h1 {
+	margin-left: 5%;
+	position: absolute;
+	padding-top: 2%;
+	color: #f1f1f1;
+  }
+  h1 a {
+	text-decoration: none;
+	color: #f1f1f1;
+  }
+  
+  nav{
+	margin-right: 5%;
+   padding-top: 1%;
+   float: right; 
+  }
+  nav ul li{
+	display: inline;
+  }
 
 /* for the header */
-
 .dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	cursor: pointer;
+	background-color: #030303;
+	color: #f1f1f1;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	border-radius: 6px;
   }
-  
   .dropdown {
-    position: relative;
-    display: inline-block;
+	position: relative;
+	display: inline-block;
   }
-  
   .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+	border-radius: 9px;
+	display: none;
+	position: absolute;
+	background-color: #1E212D;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
   }
-  
   .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+	cursor: pointer;
+	color: #f1f1f1;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
   }
   
-
+/* 
  images 
 
 .obada p{
@@ -77,7 +116,7 @@
   }
   #mid-section a{
 	  text-decoration: none;
-  }
+  } */
 
 
 
@@ -88,9 +127,9 @@
   
   .dropdown:hover .dropbtn {background-color: #000000;}
 
-  .icon{
+  /* .icon{
     width: 50px;
-  } 
+  }  */
  
 
 
@@ -100,18 +139,51 @@
 
   /* image css */
 
-  /* .image-area
+  .image-area
+{
+	top: 50%;
+	left: 20%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+}
+.image-area2
 {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	position: absolute;
 }
+.image-area3
+{
+	/* padding-top: 50px; */
+	top:100%;
+	left: 30%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	padding-top: 30%; 
+	padding-bottom: 5%;
+}
+.image-area4
+{
+	top: 50%;
+	left: 80%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+}
+.image-area5{
+
+	top: 100%;
+	left:70%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	padding-top: 30%; 
+	padding-bottom: 5%;
+}
 
 .img-wrapper
 {
-	width: 300px;
-	height: 400px;
+	width: 400px;
+	height: 650px;
 	position: relative;
 	overflow: hidden;
 }
@@ -137,8 +209,8 @@
 
 .img-wrapper img
 {
-	height: 400px;
-	width: 300px;
+	height:650px;
+	width: 400px;
 	filter: grayscale(100%);
 	transition: 2s;
 }
@@ -150,7 +222,7 @@
 
 .img-wrapper h2
 {
-	background: tomato;
+	background: rgb(0, 0, 0);
 	font-family: Poppins;
 	color: #fff;
 	text-align: center;
@@ -169,7 +241,6 @@
 {
 	transform: perspective(400px) rotateY(0deg);
 }
-
 .img-wrapper ul
 {
 	position: absolute;
@@ -220,13 +291,13 @@
 
 .img-wrapper ul li a
 {
-	color: tomato;
+	color: rgb(82, 180, 197);
 	background: rgba(255,255,255,0);
 }
 
 .img-wrapper ul li i
 {
-	color: tomato;
+	color: rgb(82, 180, 197);
 	background: rgba(255,255,255,0);
 }
 
@@ -234,7 +305,56 @@
 {
 	color: #fff;
 	background: rgba(255,255,255,0);
+} 
+
+
+/* .fa-instagram:before {
+    content: "\f16d";
 } */
+
+/*
+ ------footer design------------;
+
+
+*/
+
+footer{
+	margin-top: 80%; 
+  /* margin: 0%;  */
+  height: 50%;
+background-color: #030303;
+}
+.icon{
+  width: 30px;
+}
+#footerOne ul {
+  /* margin: 2%;  */
+  padding: 2%;
+}
+#footerOne ul li {
+  float: right;
+  padding:2%;
+  padding-left: 6%;
+}
+#footerTwo {
+  color: #f1f1f1;
+  line-height: 20px;
+  padding-bottom: 1%;
+  margin-left: 20%;
+  text-align: -webkit-center
+}
+#logo{
+  color: #f1f1f1;
+  position: absolute;
+
+  margin-left: 3.5%;
+  margin-top: 3% ;
+}
+#logo a{
+  text-decoration: none;
+  color: #f1f1f1;
+
+}
 
 
 
@@ -487,138 +607,3 @@
 	padding: 0;
 } */
 
-.image-area
-{
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	position: absolute;
-}
-
-.img-wrapper
-{
-	width: 300px;
-	height: 400px;
-	position: relative;
-	overflow: hidden;
-}
-
-.img-wrapper:before
-{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 180%;
-	height: 100%;
-	width: 100%;
-	background: rgba(255,255,255,.3);
-	z-index: 1;
-	transform: skew(45deg);
-	transition: .5s;
-}
-
-.img-wrapper:hover:before
-{
-	left: -180%;
-}
-
-.img-wrapper img
-{
-	height: 400px;
-	width: 300px;
-	filter: grayscale(100%);
-	transition: 2s;
-}
-.img-wrapper:hover img
-{
-	filter: grayscale(0%);
-	transform: scale(1.1);
-}
-
-.img-wrapper h2
-{
-	background: tomato;
-	font-family: Poppins;
-	color: #fff;
-	text-align: center;
-	text-transform: uppercase;
-	margin: 0;
-	padding: 10px 0;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	transform: perspective(400px) rotateY(90deg);
-	transform-origin: right;
-	transition: 1s;
-}
-
-.img-wrapper:hover h2
-{
-	transform: perspective(400px) rotateY(0deg);
-}
-
-.img-wrapper ul
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	background: rgba(255,255,255,0);
-}
-
-.img-wrapper ul li
-{
-	background: #333;
-	height: 40px;
-	width: 40px;
-	text-align: center;
-	line-height: 40px;
-	transform: perspective(800px) rotateY(90deg);
-	transition: .5s;
-	transform-origin: left;
-}
-
-.img-wrapper:hover ul li
-{
-	transform: perspective(800px) rotateY(0deg);
-}
-
-.img-wrapper:hover ul li:nth-child(1)
-{
-	transition-delay: .2s;
-}
-
-.img-wrapper:hover ul li:nth-child(2)
-{
-	transition-delay: .6s;
-}
-
-.img-wrapper:hover ul li:nth-child(3)
-{
-	transition-delay: .8s;
-}
-
-.img-wrapper:hover ul li:nth-child(4)
-{
-	transition-delay: 1s;
-}
-
-.img-wrapper ul li a
-{
-	color: tomato;
-	background: rgba(255,255,255,0);
-}
-
-.img-wrapper ul li i
-{
-	color: tomato;
-	background: rgba(255,255,255,0);
-}
-
-.img-wrapper ul li i:hover
-{
-	color: #fff;
-	background: rgba(255,255,255,0);
-}
