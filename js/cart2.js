@@ -171,10 +171,9 @@ Product.prototype.render = function(){
 
 
   let object=this;
-
+  //  This event listner is responsible for removing items from the cart;
   function submitter(event) {
     event.preventDefault();
-
     tr.textContent='';
     console.log(object);
     // delete form array
@@ -182,7 +181,7 @@ Product.prototype.render = function(){
       console.log(products[i]);
       if (products[i].title===object.title) {
         console.log('hello');
-        products.splice(i,1); 
+        products.splice(i,1);
         // Product.allproduct.splice(products.indexOf(object),1);
       }
 

@@ -88,7 +88,7 @@ nav ul li{
 img {vertical-align: middle;}
 
 /* Slideshow container */
-/*.slideshow-container {
+ .slideshow-container {
   max-width: 80%;
   position: relative;
   margin: auto;
@@ -100,7 +100,7 @@ img {vertical-align: middle;}
 
 
 /* The dots/bullets/indicators */
-/*.dot {
+.dot {
   height: 15px;
   width: 15px;
   margin: 0 2px;
