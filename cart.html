@@ -21,12 +21,19 @@
         <div class=".main-logo">
             <h1><a href="index.html">Vip Coffee</a></h1>
             <!-- <a href="index.html"><img src="img/coffeelogo.png" alt="logo"></a> -->
-          </div>
+        </div>
 
         <!-- <a href="index.html"><img src="img/coffeelogo.png" alt="logo"></a> -->
 
         <nav>
             <ul>
+                <li>
+                    <div class="dropdown">
+                        <a href="cart.html">
+                            <button class="dropbtn">Home</button>
+                        </a>
+                    </div>
+                </li>
                 <li>
 
                     <div class="dropdown">
@@ -115,7 +122,7 @@
                             <label for="pnumber">Phone Number</label>
                         </div>
                         <div class="col-75">
-                            <input type="tel" id="pnumber" name="pnumber" placeholder="Your phone number..">
+                            <input type="text" id="pnumber" name="pnumber" placeholder="Your phone number..">
                         </div>
                     </div>
                     <div class="row">
@@ -132,40 +139,41 @@
                             <label for="promo">Promo Code</label>
                         </div>
                         <div class="col-75">
-                            <input type="text" id="promo" name="promo" placeholder="Your Promo Code..">
+                            <input type="text" id="promo" name="promo" placeholder="Your Promo Code.." onchange="changingPromo()">
                         </div>
 
-                    
-                    
 
-                        
+
+
+
                         <div id="mystars">
-                        <!-- <h1 id="ratings">Raitings & Reviews </h1> -->
+                            <!-- <h1 id="ratings">Raitings & Reviews </h1> -->
 
-                        <div class="stars" data-rating="0">
-                            <span class="star">&nbsp;</span>
-                            <span class="star">&nbsp;</span>
-                            <span class="star">&nbsp;</span>
-                            <span class="star">&nbsp;</span>
-                            <span class="star">&nbsp;</span>
+                            <div class="stars" data-rating="0">
+                                <span class="star">&nbsp;</span>
+                                <span class="star">&nbsp;</span>
+                                <span class="star">&nbsp;</span>
+                                <span class="star">&nbsp;</span>
+                                <span class="star">&nbsp;</span>
+                            </div>
+
+
                         </div>
-
-
-                    </div>
-                    <div class="row">
-                        <input id="Checkout" type="submit" value="Checkout">
-                    </div>
+                        <div class="row">
+                            <input id="Checkout" type="submit" value="Checkout" >
+                        </div>
                 </form>
         </section>
 
         <section id="cartInfo">
+            <p id="newTotal"></p>
             <div id="cart-container" class="card">
                 <table id="cart">
                     <thead>
                         <tr>
                             <!-- Image -->
 
-                            <th>Image</th>
+                            <th id="imagehead">Image</th>
                             <th>Title</th>
                             <!-- Name -->
 
@@ -192,30 +200,30 @@
     </main>
     <footer>
         <div id="logo">
-          <p><a href="index.html">Vip Coffee</a></p>
+            <p><a href="index.html">Vip Coffee</a></p>
         </div>
-    
+
         <div id="footerOne">
-    
-          <ul>
-            <li><a href="#"><img class="icon" src="img/facebookLogo.png" alt=""></a></li>
-            <li><a href="#"><img class="icon" src="img/instaLogo.png" alt=""></a></li>
-            <li><a href="#"><img class="icon" src="img/pinlogo.png" alt=""></a></li>
-          </ul>
+
+            <ul>
+                <li><a href="#"><img class="icon" src="img/facebookLogo.png" alt=""></a></li>
+                <li><a href="#"><img class="icon" src="img/instaLogo.png" alt=""></a></li>
+                <li><a href="#"><img class="icon" src="img/pinlogo.png" alt=""></a></li>
+            </ul>
         </div>
-    
+
         <div id="footerTwo">
-          <ul>
-            <li>
-              <p>&copy;Alliance-Team 2021</p>
-              <p>Franchise</p>
-              <P>Contacts</P>
-            </li>
-          </ul>
+            <ul>
+                <li>
+                    <p>&copy;Alliance-Team 2021</p>
+                    <p>Franchise</p>
+                    <P>Contacts</P>
+                </li>
+            </ul>
         </div>
-    
-    
-      </footer>
+
+
+    </footer>
     <script src="js/menu.js"></script>
     <script src="js/cart2.js"></script>
 </body>

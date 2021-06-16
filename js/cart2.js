@@ -8,6 +8,8 @@
 let totalValue=0;
 let products=[];
 
+let sum=0;
+
 // console.log(data);
 // localStorage.setItem('products',JSON.stringify(item));func
 
@@ -35,6 +37,7 @@ function Product (image, title, price){
   //   console.log(this.title);
   this.price = price;
   Product.allproduct.push(this);
+  sum+=this.price;
 }
 getData();
 Product.allproduct = [];
@@ -152,9 +155,13 @@ Product.prototype.render = function(){
   // document.getElementById("myDIV").classList.add("mystyle");
   let tdQuantity = document.createElement('td');
   let quantityInput = document.createElement('input');
-  quantityInput.setAttribute('id',this.price);
+  // quantityInput.setAttribute('id',this.price);
+  quantityInput.setAttribute('class','quan');
+  quantityInput.setAttribute('onchange','changing()');
+  quantityInput.setAttribute('value',1);
+
   tdQuantity.setAttribute('class','quantity');
-  quantityInput.addEventListener('change',quantityTotal);
+  // quantityInput.addEventListener('change',quantityTotal);
   quantityInput.setAttribute('type', 'number');
   tdQuantity.appendChild(quantityInput);
   tr.appendChild(tdQuantity);
@@ -185,10 +192,12 @@ Product.prototype.render = function(){
         // Product.allproduct.splice(products.indexOf(object),1);
       }
 
+
     }
 
     // localStorage.setItem(JSON.stringify('products',products));
     localStorage.setItem('products',JSON.stringify(products));
+    changing();
 
 
     console.log(products);
@@ -197,48 +206,48 @@ Product.prototype.render = function(){
 };
 
 
-let totalQua;
-function quantityTotal(event) {
-  console.log(event.target.value);
-  console.log(event.target.id);
-  totalQua=document.getElementById('totalQua');
-  totalValue=totalValue+Number(event.target.value )* Number(event.target.id);
-  let totalYn=Math.round(totalValue*100)/100;
-  totalQua.textContent=` Total:$ ${totalYn} `;
+// let totalQua;
+// function quantityTotal(event) {
+//   console.log(event.target.value);
+//   console.log(event.target.id);
+//   totalValue=totalValue+Number(event.target.value )* Number(event.target.id);
+//   let totalYn=Math.round(totalValue*100)/100;
+//   totalQua=document.getElementById('totalQua');
+//   // totalQua.textContent=` Total:$ ${totalYn} `;
 
 
 
 
-}
+// }
 
 
 
 
 // storageUpdate();
 
-function tableFooter(){
-  let tfoot = document.getElementById('tfoot');
-  let tr = document.createElement('tr');
-  tfoot.appendChild(tr);
-  let td = document.createElement('td');
-  tr.appendChild(td);
-  // let tbody = document.getElementById('tbody');
-  // let productRow = tbody.getElementsByClassName('tr');
-  // let total = 0;
-  // for (let i = 0; i < Product.allproduct.length; i++) {
+// function tableFooter(){
+//   let tfoot = document.getElementById('tfoot');
+//   let tr = document.createElement('tr');
+//   tfoot.appendChild(tr);
+//   let td = document.createElement('td');
+//   tr.appendChild(td);
+//   // let tbody = document.getElementById('tbody');
+//   // let productRow = tbody.getElementsByClassName('tr');
+//   // let total = 0;
+//   // for (let i = 0; i < Product.allproduct.length; i++) {
 
-  //   let tr= productRow[i];
-  //   let priceElement=tr.getElementsByClassName('price');
-  //   let quantityElement=tr.getElementsByClassName('quantity');
-  //   let price=priceElement.value;
-  //   let quantity=quantityElement.value;
-  //   total=total+(price*quantity);
-  // }
-  td.textContent = 'Total: $0';
-  td.setAttribute('id','totalQua');
+//   //   let tr= productRow[i];
+//   //   let priceElement=tr.getElementsByClassName('price');
+//   //   let quantityElement=tr.getElementsByClassName('quantity');
+//   //   let price=priceElement.value;
+//   //   let quantity=quantityElement.value;
+//   //   total=total+(price*quantity);
+//   // }
+//   td.textContent = 'Total: $0';
+//   td.setAttribute('id','totalQua');
 
-}
-tableFooter();
+// }
+// tableFooter();
 
 
 //render();
@@ -355,7 +364,9 @@ function handlerSubmitter(event){
   let lastName=event.target.lastname.value;
   let location= event.target.country.value;
 
-  totalQua.textContent = ' Total $0';
+  // totalQua.textContent = ' Total $0';
+  checkout.reset();
+
 
 
 
@@ -379,4 +390,54 @@ function handlerSubmitter(event){
 // handlersubmit ,  you should take the data from the form and pass them to the constructor and creat new Form object
 // send the Form.allForm array to the local storage
 //new Form ()
+
+let totalEl=document.getElementById('newTotal');
+totalEl.textContent=`Total ${sum}`;
+let inputs=document.getElementsByClassName('quan');
+let price=document.getElementsByClassName('price');
+console.log(inputs[0]);
+
+let newSum=0;
+let promoValues=[];
+
+function gettingPromo() {
+  let code=localStorage.getItem('promo');
+  let discount=localStorage.getItem('discount');
+  console.log(code,discount);
+  promoValues.push(code,discount);
+}
+gettingPromo();
+
+
+function changingPromo() {
+  let promo=document.getElementById('promo');
+  console.log( promo.value);
+  if (promo.value===promoValues[0]) {
+    let discounted=promoValues[1]*100;
+    console.log(discounted);
+    sum=sum/discounted;
+    console.log(sum);
+    totalEl.textContent=`Total ${sum}`;
+
+  }else{
+    Swal.fire('Please enter a correct promo');
+  }
+
+
+
+}
+function changing() {
+
+  sum=0;
+  for (let i = 0; i < inputs.length; i++) {
+    console.log('new total',inputs[i].value);
+    console.log(price[i].innerText);
+    newSum=inputs[i].value * price[i].innerText;
+    sum+=newSum;
+    sum=Math.round(sum*100)/100;
+
+  }
+  console.log(sum);
+  totalEl.textContent=`Total ${sum}`;
+}
 
