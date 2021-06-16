@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/cart.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Cart</title>
 </head>
 
@@ -121,13 +122,20 @@
                                 style="height:200px"></textarea>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="promo">Promo Code</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="promo" name="promo" placeholder="Your Promo Code..">
+                        </div>
 
                     
                     
 
-                    <h1>Raitings & Reviews </h1>
-
-                    <div id="mystars">
+                        
+                        <div id="mystars">
+                        <!-- <h1 id="ratings">Raitings & Reviews </h1> -->
 
                         <div class="stars" data-rating="0">
                             <span class="star">&nbsp;</span>

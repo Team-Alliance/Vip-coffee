@@ -157,10 +157,20 @@ input[type=submit]:hover{
 /* =======================================End For Form==================================== */
 
 /* this is for star  */
+
 #mystars{
-  margin-top: 50px;
+  /* margin-top: 70px; */
+  padding-top: 111px;
   /* box-shadow: 0 0 20px rgb(255, 255, 255);
   background-color: #1E212D; */
+}
+#ratings{
+  
+  padding-top: 4%;
+
+}
+#personalInfo{
+  padding-top: 1%;
 }
 .star{
   color: goldenrod;

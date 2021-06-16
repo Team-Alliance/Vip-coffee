@@ -182,7 +182,7 @@ Product.prototype.render = function(){
       console.log(products[i]);
       if (products[i].title===object.title) {
         console.log('hello');
-        products.splice(i,1);
+        products.splice(i,1); 
         // Product.allproduct.splice(products.indexOf(object),1);
       }
 
@@ -198,11 +198,11 @@ Product.prototype.render = function(){
 };
 
 
-
+let totalQua;
 function quantityTotal(event) {
   console.log(event.target.value);
   console.log(event.target.id);
-  let totalQua=document.getElementById('totalQua');
+  totalQua=document.getElementById('totalQua');
   totalValue=totalValue+Number(event.target.value )* Number(event.target.id);
   let totalYn=Math.round(totalValue*100)/100;
   totalQua.textContent=` Total:$ ${totalYn} `;
@@ -349,11 +349,14 @@ function handlerSubmitter(event){
   // Removing all items from the cart page once the checkout is clicked;
   tbody.textContent = ' ';
   localStorage.removeItem('products');
-  alert('Thank You for your purchase, Your rating will be in the home page');
+  // alert('Thank You for your purchase, Your rating will be in the home page');
+  Swal.fire('Thank You for your purchase, Your rating will be in the home page');
   // Saving data;
   let name=event.target.firstname.value;
   let lastName=event.target.lastname.value;
   let location= event.target.country.value;
+
+  totalQua.textContent = ' Total $0';
 
 
 
