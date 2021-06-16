@@ -258,9 +258,9 @@ function render() {
 
 
     if (Product.allProduct[i].catagory === 'beverage') {
-      
+
       let articleBev = document.getElementById('beverage');
-      
+
       parents.appendChild(articleBev);
       // hElementBev.textContent='Baverage';
       let hElement=document.getElementById('hElement');
@@ -271,28 +271,35 @@ function render() {
       let div=document.createElement('div');
 
       hElement.appendChild(div);
-
-
+      //------1
+      div.setAttribute('id','div12');
+      //------1
       let image = document.createElement('img');
       div.appendChild(image);
+
       // image.src = this.imagoducte;
       image.src = Product.allProduct[i].image;
-
+      image.setAttribute('id','imeges12');
       let headerTitle = document.createElement('h1');
       div.appendChild(headerTitle);
       // headerTitle.textContent=this.title;
       headerTitle.textContent = Product.allProduct[i].title;
+      //------2
+      headerTitle.setAttribute('id','title12');
+      //------2
       let priceItem = document.createElement('p');
       // priceItem.textContent=this.price;
       priceItem.textContent = Product.allProduct[i].price;
       div.appendChild(priceItem);
-
-
-
+      //------3
+      priceItem.setAttribute('id','priceItem12');
+      //------3
       let discriptionItem = document.createElement('p');
       // discriptionItem.textContent=this.description;
       discriptionItem.textContent = Product.allProduct[i].description;
-
+      //------4
+      discriptionItem.setAttribute('id','disc12');
+      //------4
       div.appendChild(discriptionItem);
 
 
@@ -330,6 +337,9 @@ function render() {
       let div=document.createElement('div');
 
       hSnack.appendChild(div);
+      //------1
+      div.setAttribute('id','div13');
+      //------1
       // articleBev=document.getElementById('beverage');
       // parent.appendChild(articleBev);
 
@@ -342,24 +352,31 @@ function render() {
       div.appendChild(image);
       // image.src = this.imagoducte;
       image.src = Product.allProduct[i].image;
+      image.setAttribute('id','imeges13');
 
       let headerTitle = document.createElement('h1');
       div.appendChild(headerTitle);
       // headerTitle.textContent=this.title;
       headerTitle.textContent = Product.allProduct[i].title;
-
+      //------2
+      headerTitle.setAttribute('id','title13');
+      //------2
 
       let priceItem = document.createElement('p');
       // priceItem.textContent=this.price;
       priceItem.textContent = Product.allProduct[i].price;
       div.appendChild(priceItem);
-
+      //------3
+      priceItem.setAttribute('id','priceItem13');
+      //------3
 
 
       let discriptionItem = document.createElement('p');
       // discriptionItem.textContent=this.description;
       discriptionItem.textContent = Product.allProduct[i].description;
-
+      //------4
+      discriptionItem.setAttribute('id','disc13');
+      //------4
       div.appendChild(discriptionItem);
 
 
@@ -390,6 +407,9 @@ function render() {
       let div=document.createElement('div');
 
       hBverage.appendChild(div);
+      //------1
+      div.setAttribute('id','div14');
+      //------1
       // articleBev=document.getElementById('beverage');
       // parent.appendChild(articleBev);
 
@@ -402,22 +422,29 @@ function render() {
       div.appendChild(image);
       // image.src = this.imagoducte;
       image.src = Product.allProduct[i].image;
-
+      image.setAttribute('id','imeges14');
       let headerTitle = document.createElement('h1');
       div.appendChild(headerTitle);
       // headerTitle.textContent=this.title;
       headerTitle.textContent = Product.allProduct[i].title;
+      //------2
+      headerTitle.setAttribute('id','title14');
+      //------2
 
       let priceItem = document.createElement('p');
       // priceItem.textContent=this.price;
       priceItem.textContent = Product.allProduct[i].price;
       div.appendChild(priceItem);
-
+      //------3
+      priceItem.setAttribute('id','priceItem14');
+      //------3
 
       let discriptionItem = document.createElement('p');
       // discriptionItem.textContent=this.description;
       discriptionItem.textContent = Product.allProduct[i].description;
-
+      //------4
+      discriptionItem.setAttribute('id','disc14');
+      //------4
       div.appendChild(discriptionItem);
 
 
