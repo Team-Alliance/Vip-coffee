@@ -282,7 +282,7 @@ input[type=submit]:hover{
     line-height: 20px;
     padding-bottom: 1%;
     margin-left: 20%;
-    text-align: -webkit-center
+    text-align: -webkit-center  
   }
   #logo{
     color: #f1f1f1;
