@@ -259,18 +259,18 @@ function render() {
 
     if (Product.allProduct[i].catagory === 'beverage') {
 
+      let hElement=document.getElementById('hElement');
+      parents.appendChild(hElement);
       let articleBev = document.getElementById('beverage');
 
       parents.appendChild(articleBev);
       // hElementBev.textContent='Baverage';
-      let hElement=document.getElementById('hElement');
-      articleBev.appendChild(hElement);
       // let article=getElementById
 
       // hElement.textContent='Bevarage';
       let div=document.createElement('div');
 
-      hElement.appendChild(div);
+      articleBev.appendChild(div);
       //------1
       div.setAttribute('id','div12');
       //------1
@@ -327,16 +327,16 @@ function render() {
 
 
     } else if (Product.allProduct[i].catagory === 'snacks') {
+      let hSnack=document.getElementById('hSnack');
+      parents.appendChild(hSnack);
       let articleSnack = document.getElementById('snacks');
       parents.appendChild(articleSnack);
-      let hSnack=document.getElementById('hSnack');
-      articleSnack.appendChild(hSnack);
       // let article=getElementById
 
       // hElement.textContent='Bevarage';
       let div=document.createElement('div');
 
-      hSnack.appendChild(div);
+      articleSnack.appendChild(div);
       //------1
       div.setAttribute('id','div13');
       //------1
@@ -397,16 +397,16 @@ function render() {
 
 
     else if (Product.allProduct[i].catagory === 'desserts') {
+      let hBverage=document.getElementById('hDess');
+      parents.appendChild(hBverage);
       let articleDess = document.getElementById('desserts');
       parents.appendChild(articleDess);
-      let hBverage=document.getElementById('hDess');
-      articleDess.appendChild(hBverage);
       // let article=getElementById
 
       // hElement.textContent='Bevarage';
       let div=document.createElement('div');
 
-      hBverage.appendChild(div);
+      articleDess.appendChild(div);
       //------1
       div.setAttribute('id','div14');
       //------1
