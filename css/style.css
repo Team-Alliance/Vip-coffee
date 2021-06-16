@@ -266,26 +266,41 @@ h3{
   text-align: justify;
 }
 #show{
-  margin: 4%;
-text-align: center;
-background-color: #030303;
-width: 50%;
-margin-left: 30%;
+  margin: 1%;
+  text-align: center;
+  background-color: #030303;
+  width: 50%;
+  margin-left: 27%;
+  border-style: inset;
+  border-width: 19px;
+  border-color: ghostwhite;
 }
 #show p{
   color: #f1f1f1;
   line-height: 20px;
   font-weight: 500;
-  font-size: 20px;
+  /* font-size: 20px; */
   /* text-indent: 50px; */
-  text-align: justify;
+  /* text-align: justify; */
   /* position: absolute */
+  color: #f1f1f1;
+    line-height: 39px;
+    /* font-weight: 500; */
+    font-family: -webkit-pictograph;
+    font-size: x-large;
+    padding-top: 2%;
 }
 #show i{
   margin-bottom: 12%;
 
 }
 
+#show div{
+
+  padding: 2%;
+  font-size: xx-large;
+
+}
 
 /* footer style sheet  */
 footer{
