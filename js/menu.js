@@ -289,7 +289,7 @@ function render() {
       //------2
       let priceItem = document.createElement('p');
       // priceItem.textContent=this.price;
-      priceItem.textContent = Product.allProduct[i].price;
+      priceItem.textContent = `${Product.allProduct[i].price} $`;
       div.appendChild(priceItem);
       //------3
       priceItem.setAttribute('id','priceItem12');
@@ -364,7 +364,7 @@ function render() {
 
       let priceItem = document.createElement('p');
       // priceItem.textContent=this.price;
-      priceItem.textContent = Product.allProduct[i].price;
+      priceItem.textContent =  `${Product.allProduct[i].price} $`;
       div.appendChild(priceItem);
       //------3
       priceItem.setAttribute('id','priceItem13');
@@ -433,7 +433,7 @@ function render() {
 
       let priceItem = document.createElement('p');
       // priceItem.textContent=this.price;
-      priceItem.textContent = Product.allProduct[i].price;
+      priceItem.textContent =  `${Product.allProduct[i].price} $`;
       div.appendChild(priceItem);
       //------3
       priceItem.setAttribute('id','priceItem14');
@@ -482,7 +482,14 @@ function submiter(event) {
 
     item.push(Product.allProduct[event.target.id]);
     localStorage.setItem('products',JSON.stringify(item));
-    alert('You Added To Cart');
+    // Swal.fire('You Added To Cart');
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'You Added To Cart',
+      showConfirmButton: false,
+      timer: 1500
+    })
     // console.log('hello');
   }
   // else if (event.target.id===item.name) {
